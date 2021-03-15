@@ -33,7 +33,6 @@ void square_dgemm (int n, double* A, double* B, double* C)
           for(int j = jj; j < ((jj+s)>n?n:(jj+s)); j++){
             double cij = C[i+j*n];
             for(int k = kk; k < ((kk+s)>n?n:(kk+s)); k++){
-              #pragma omp critical
               cij += A[i+k*n] * B[k+j*n];
             }
             C[i+j*n] = cij;

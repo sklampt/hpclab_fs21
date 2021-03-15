@@ -2,6 +2,7 @@
 
 \usepackage{graphicx}
 \usepackage{subcaption}
+\graphicspath{/home/sklampt/ETH/fs21/hpclab/hpclab_euler/Project1/membench/}
 
 \input{assignment.sty}
 \begin{document}
@@ -34,7 +35,9 @@ Using the commands given on the exercise sheet, I was able to find the following
 
 \subsection{Running Membench}
 In this exercise we were supposed to run the membench program on our local machine and on the Euler cluster.
+
 The first plot (Fig. 1) represents the results on my local machine. I have a Intel Core i7 processor with 16 GB of Main Memory, 196 kB of L1 cache, 2 MB of L2 cache and 8 MB of L3 cache.
+
 The second plot (Fig. 2) represents the results using Euler. I have used the Xeon Gold 6150 CPU.
 When we look at the time axis, we can easily see that the performance of the Euler cluster is much better than on my local machine.
 \begin{figure}[h!]
@@ -44,12 +47,14 @@ When we look at the time axis, we can easily see that the performance of the Eul
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics{../membench/generic_euler.ps}
+    \includegraphics{generic_euler.ps}
     \caption{Plot for Euler}
 \end{figure}
 
 \subsection{Memory Access Patterns}
-asdf
+In the first case we had: csize = 128 and stride = 1. Since one integer corresponds to 4 Bytes, we have 128 times 4 which equals 512. Thus we need to look at the red line corresponding to 0.5 kB.
+
+In the second case we had: csize = 
 
 \subsection{Temporal Locality}
 asdf
