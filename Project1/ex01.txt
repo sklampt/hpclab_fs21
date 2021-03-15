@@ -1,0 +1,7 @@
+exercise 1:
+
+1)
+main memory: 32871820 KB
+L3 cache: 6144 KB
+L2 cache: 256 KB
+L1 cache: 32 KB
