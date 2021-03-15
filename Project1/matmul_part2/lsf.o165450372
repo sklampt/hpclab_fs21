@@ -1,0 +1,157 @@
+Sender: LSF System <lsfadmin@eu-c7-121-16>
+Subject: Job 165450372: <#!/bin/bash -l; #SBATCH --job-name=matrixmult;#SBATCH --time=00:30:00;#SBATCH --nodes=1;#SBATCH --output=matrixmult-%j.out;#SBATCH --error=matrixmult-%j.err; # load modules;if command -v module 1>/dev/null 2>&1; then;   module load gcc mkl;fi; export OMP_NUM_THREADS=10;export MKL_NUM_THREADS=10; echo "==== benchmark-naive ======================";./benchmark-naive | tee timing_basic_dgemm.data;echo;echo "==== benchmark-blas =======================";./benchmark-blas | tee timing_blas_dgemm.data;echo;echo "==== benchmark-blocked ====================";./benchmark-blocked | tee timing_blocked_dgemm.data; echo;echo "==== plot results =========================";gnuplot timing.gp> in cluster <euler> Done
+
+Job <#!/bin/bash -l; #SBATCH --job-name=matrixmult;#SBATCH --time=00:30:00;#SBATCH --nodes=1;#SBATCH --output=matrixmult-%j.out;#SBATCH --error=matrixmult-%j.err; # load modules;if command -v module 1>/dev/null 2>&1; then;   module load gcc mkl;fi; export OMP_NUM_THREADS=10;export MKL_NUM_THREADS=10; echo "==== benchmark-naive ======================";./benchmark-naive | tee timing_basic_dgemm.data;echo;echo "==== benchmark-blas =======================";./benchmark-blas | tee timing_blas_dgemm.data;echo;echo "==== benchmark-blocked ====================";./benchmark-blocked | tee timing_blocked_dgemm.data; echo;echo "==== plot results =========================";gnuplot timing.gp> was submitted from host <eu-login-35> by user <sklampt> in cluster <euler> at Mon Mar 15 22:12:10 2021
+Job was executed on host(s) <10*eu-c7-121-16>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Mar 15 22:12:21 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project1/matmul_part2> was used as the working directory.
+Started at Mon Mar 15 22:12:21 2021
+Terminated at Mon Mar 15 22:16:56 2021
+Results reported at Mon Mar 15 22:16:56 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+
+#SBATCH --job-name=matrixmult
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --output=matrixmult-%j.out
+#SBATCH --error=matrixmult-%j.err
+
+# load modules
+if command -v module 1>/dev/null 2>&1; then
+   module load gcc mkl
+fi
+
+export OMP_NUM_THREADS=10
+export MKL_NUM_THREADS=10
+
+echo "==== benchmark-naive ======================"
+./benchmark-naive | tee timing_basic_dgemm.data
+echo
+echo "==== benchmark-blas ======================="
+./benchmark-blas | tee timing_blas_dgemm.data
+echo
+echo "==== benchmark-blocked ===================="
+./benchmark-blocked | tee timing_blocked_dgemm.data
+
+echo
+echo "==== plot results ========================="
+gnuplot timing.gp
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2725.73 sec.
+    Max Memory :                                 37 MB
+    Average Memory :                             33.25 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               10203.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                15
+    Run time :                                   304 sec.
+    Turnaround time :                            286 sec.
+
+The output (if any) follows:
+
+==== benchmark-naive ======================
+#Description:	Naive, three-loop dgemm.
+
+Size: 31	Mflop/s:     5860	Percentage:  3.05
+Size: 32	Mflop/s:  6335.58	Percentage:  3.30
+Size: 96	Mflop/s:    13620	Percentage:  7.09
+Size: 97	Mflop/s:  13641.4	Percentage:  7.10
+Size: 127	Mflop/s:  12948.1	Percentage:  6.74
+Size: 128	Mflop/s:  12677.8	Percentage:  6.60
+Size: 129	Mflop/s:  13043.6	Percentage:  6.79
+Size: 191	Mflop/s:  13757.3	Percentage:  7.17
+Size: 192	Mflop/s:  13526.9	Percentage:  7.05
+Size: 229	Mflop/s:  13796.1	Percentage:  7.19
+Size: 255	Mflop/s:  13736.2	Percentage:  7.15
+Size: 256	Mflop/s:  13340.9	Percentage:  6.95
+Size: 257	Mflop/s:  13778.8	Percentage:  7.18
+Size: 319	Mflop/s:  13641.6	Percentage:  7.10
+Size: 320	Mflop/s:  13420.2	Percentage:  6.99
+Size: 321	Mflop/s:  13636.7	Percentage:  7.10
+Size: 417	Mflop/s:  13225.2	Percentage:  6.89
+Size: 479	Mflop/s:  13110.8	Percentage:  6.83
+Size: 480	Mflop/s:  13108.4	Percentage:  6.83
+Size: 511	Mflop/s:  13099.6	Percentage:  6.82
+Size: 512	Mflop/s:  3895.52	Percentage:  2.03
+Size: 639	Mflop/s:  12900.1	Percentage:  6.72
+Size: 640	Mflop/s:  12805.3	Percentage:  6.67
+Size: 767	Mflop/s:  12971.3	Percentage:  6.76
+Size: 768	Mflop/s:  4775.36	Percentage:  2.49
+Size: 769	Mflop/s:  12932.3	Percentage:  6.74
+#Average percentage of Peak = 6.28175
+
+==== benchmark-blas =======================
+#Description:	Reference dgemm.
+
+Size: 31	Mflop/s:    17979	Percentage:  9.36
+Size: 32	Mflop/s:  23383.1	Percentage: 12.18
+Size: 96	Mflop/s:  97608.2	Percentage: 50.84
+Size: 97	Mflop/s:   101185	Percentage: 52.70
+Size: 127	Mflop/s:   117066	Percentage: 60.97
+Size: 128	Mflop/s:   134461	Percentage: 70.03
+Size: 129	Mflop/s:   123811	Percentage: 64.48
+Size: 191	Mflop/s:   202561	Percentage:105.50
+Size: 192	Mflop/s:   207277	Percentage:107.96
+Size: 229	Mflop/s:   182222	Percentage: 94.91
+Size: 255	Mflop/s:   208128	Percentage:108.40
+Size: 256	Mflop/s:   206598	Percentage:107.60
+Size: 257	Mflop/s:   204164	Percentage:106.34
+Size: 319	Mflop/s:   208419	Percentage:108.55
+Size: 320	Mflop/s:   255978	Percentage:133.32
+Size: 321	Mflop/s:   240417	Percentage:125.22
+Size: 417	Mflop/s:   234703	Percentage:122.24
+Size: 479	Mflop/s:   234096	Percentage:121.93
+Size: 480	Mflop/s:   271129	Percentage:141.21
+Size: 511	Mflop/s:   258855	Percentage:134.82
+Size: 512	Mflop/s:   259555	Percentage:135.18
+Size: 639	Mflop/s:   246310	Percentage:128.29
+Size: 640	Mflop/s:   264480	Percentage:137.75
+Size: 767	Mflop/s:   246239	Percentage:128.25
+Size: 768	Mflop/s:   252921	Percentage:131.73
+Size: 769	Mflop/s:   244896	Percentage:127.55
+#Average percentage of Peak = 101.05
+
+==== benchmark-blocked ====================
+#Description:	Naive, three-loop dgemm.
+
+Size: 31	Mflop/s:  59.8044	Percentage:  0.03
+Size: 32	Mflop/s:  62.8269	Percentage:  0.03
+Size: 96	Mflop/s:  62.4495	Percentage:  0.03
+Size: 97	Mflop/s:  56.6759	Percentage:  0.03
+Size: 127	Mflop/s:  62.0097	Percentage:  0.03
+Size: 128	Mflop/s:  62.7812	Percentage:  0.03
+Size: 129	Mflop/s:  57.9667	Percentage:  0.03
+Size: 191	Mflop/s:  62.2719	Percentage:  0.03
+Size: 192	Mflop/s:  62.3328	Percentage:  0.03
+Size: 229	Mflop/s:  61.1213	Percentage:  0.03
+Size: 255	Mflop/s:  61.9961	Percentage:  0.03
+Size: 256	Mflop/s:  62.2659	Percentage:  0.03
+Size: 257	Mflop/s:  59.7048	Percentage:  0.03
+Size: 319	Mflop/s:  61.9748	Percentage:  0.03
+Size: 320	Mflop/s:  58.5855	Percentage:  0.03
+Size: 321	Mflop/s:  60.1916	Percentage:  0.03
+Size: 417	Mflop/s:  60.6535	Percentage:  0.03
+Size: 479	Mflop/s:  62.0658	Percentage:  0.03
+Size: 480	Mflop/s:  62.2175	Percentage:  0.03
+Size: 511	Mflop/s:  61.9523	Percentage:  0.03
+Size: 512	Mflop/s:  63.0167	Percentage:  0.03
+Size: 639	Mflop/s:  61.6079	Percentage:  0.03
+Size: 640	Mflop/s:  61.9044	Percentage:  0.03
+Size: 767	Mflop/s:  61.5598	Percentage:  0.03
+Size: 768	Mflop/s:     62.9	Percentage:  0.03
+Size: 769	Mflop/s:  60.7604	Percentage:  0.03
+#Average percentage of Peak = 0.031923
+
+==== plot results =========================
