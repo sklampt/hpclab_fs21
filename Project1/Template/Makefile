@@ -1,4 +1,4 @@
-filename=template
+filename=project_01_klampt_sina
 
 pdf:
 	pdflatex ${filename}
