@@ -1,4 +1,4 @@
-// #include <omp.h>
+#include <omp.h>
 #include "walltime.h"
 #include <iostream>
 #include <math.h>
@@ -57,12 +57,33 @@ int main() {
   //   i.  Using reduction pragma
   //   ii. Using  critical pragma
 
+  // i)
+  time_start = wall_time();
   for (int iterations = 0; iterations < NUM_ITERATIONS; iterations++) {
     alpha_parallel = 0.0;
+#pragma omp parallel for reduction(+:alpha_parallel)
     for (int i = 0; i < N; i++) {
       alpha_parallel += a[i] * b[i];
     }
   }
+  time_red = wall_time() - time_start;
+
+  // ii)
+  time_start = wall_time();
+  for (int iterations = 0; iterations < NUM_ITERATIONS; iterations++) {
+    alpha_parallel = 0.0;
+#pragma omp parallel
+{
+  long double temp = 0;
+#pragma omp for
+  for (int i = 0; i < N; i++) {
+    temp += a[i] * b[i];
+  }
+#pragma omp critical
+  alpha_parallel += temp;
+}
+  }
+  time_critical = wall_time() - time_start;
 
   if ((fabs(alpha_parallel - alpha) / fabs(alpha_parallel)) > EPSILON) {
     cout << "parallel reduction: " << alpha_parallel << ", serial: " << alpha

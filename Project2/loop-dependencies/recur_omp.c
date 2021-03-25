@@ -1,6 +1,7 @@
 #include "walltime.h"
 #include <math.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main(int argc, char *argv[]) {
   int N = 2000000000;
@@ -15,7 +16,13 @@ int main(int argc, char *argv[]) {
 
   double time_start = wall_time();
   // TODO: YOU NEED TO PARALLELIZE THIS LOOP
+  _Bool flag = 1;
+  #pragma omp parallel for firstprivate(up, opt, flag) lastprivate(opt, Sn) private(n)
   for (n = 0; n <= N; ++n) {
+    if(flag){
+      Sn = pow(up, n+1);
+      flag = 0;
+    }
     opt[n] = Sn;
     Sn *= up;
   }

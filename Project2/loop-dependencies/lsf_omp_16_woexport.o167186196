@@ -1,0 +1,39 @@
+Sender: LSF System <lsfadmin@eu-g1-024-1>
+Subject: Job 167186196: <./recur_omp> in cluster <euler> Done
+
+Job <./recur_omp> was submitted from host <eu-login-26> by user <sklampt> in cluster <euler> at Thu Mar 25 23:37:57 2021
+Job was executed on host(s) <16*eu-g1-024-1>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Thu Mar 25 23:40:57 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/loop-dependencies> was used as the working directory.
+Started at Thu Mar 25 23:40:57 2021
+Terminated at Thu Mar 25 23:41:03 2021
+Results reported at Thu Mar 25 23:41:03 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./recur_omp
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   18.62 sec.
+    Max Memory :                                 15262 MB
+    Average Memory :                             15262.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               17506.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   13 sec.
+    Turnaround time :                            186 sec.
+
+The output (if any) follows:
+
+Parallel RunTime   :  1.273491 seconds
+Final Result Sn    :  485165097.62508112 
+Result ||opt||^2_2 :  5884629305179569.000000
+
