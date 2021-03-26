@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@eu-ms-018-31>
+Subject: Job 167318715: <./dotProduct> in cluster <euler> Exited
+
+Job <./dotProduct> was submitted from host <eu-login-14> by user <sklampt> in cluster <euler> at Fri Mar 26 18:53:23 2021
+Job was executed on host(s) <2*eu-ms-018-31>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 18:53:37 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/dotProduct> was used as the working directory.
+Started at Fri Mar 26 18:53:37 2021
+Terminated at Fri Mar 26 18:53:42 2021
+Results reported at Fri Mar 26 18:53:42 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./dotProduct
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   3.11 sec.
+    Max Memory :                                 5072 MB
+    Average Memory :                             5072.00 MB
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               -3024.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   25 sec.
+    Turnaround time :                            19 sec.
+
+The output (if any) follows:
+
