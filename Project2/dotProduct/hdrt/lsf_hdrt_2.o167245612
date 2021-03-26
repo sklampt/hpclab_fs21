@@ -1,0 +1,37 @@
+Sender: LSF System <lsfadmin@eu-c7-121-03>
+Subject: Job 167245612: <./dotProduct> in cluster <euler> Done
+
+Job <./dotProduct> was submitted from host <eu-login-11> by user <sklampt> in cluster <euler> at Fri Mar 26 13:42:27 2021
+Job was executed on host(s) <2*eu-c7-121-03>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 13:42:46 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/dotProduct> was used as the working directory.
+Started at Fri Mar 26 13:42:46 2021
+Terminated at Fri Mar 26 13:42:48 2021
+Results reported at Fri Mar 26 13:42:48 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./dotProduct
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.12 sec.
+    Max Memory :                                 7 MB
+    Average Memory :                             -
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               2041.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   15 sec.
+    Turnaround time :                            21 sec.
+
+The output (if any) follows:
+
+Serial execution time = 0.0117146 sec
+Parallel dot product = 3.33328e+13 time using reduction method = 0.00607059 sec, time using critical method 0.00609665 sec

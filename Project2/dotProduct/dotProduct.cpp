@@ -9,11 +9,11 @@
 
 // Example benchmarks
 // 0.008s ~0.8MB
-#define N 100000
+// #define N 100000
 // 0.1s ~8MB
 // #define N 1000000
 // 1.1s ~80MB
-// #define N 10000000
+#define N 10000000
 // 13s ~800MB
 // #define N 100000000
 // 127s 16GB
