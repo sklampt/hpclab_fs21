@@ -30,6 +30,7 @@ int main(int argc, char **argv) {
 
   n = 0;
   // do the calculation
+#pragma omp parallel for reduction(+:nTotalIterationsCount) schedule(dynamic) private(n, cx, cy, x, y, x2, y2, i, j)
   for (j = 0; j < IMAGE_HEIGHT; j++) {
     cx = MIN_X;
     for (i = 0; i < IMAGE_WIDTH; i++) {

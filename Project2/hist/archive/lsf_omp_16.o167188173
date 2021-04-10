@@ -1,0 +1,52 @@
+Sender: LSF System <lsfadmin@eu-g1-005-4>
+Subject: Job 167188173: <./hist_seq> in cluster <euler> Done
+
+Job <./hist_seq> was submitted from host <eu-login-26> by user <sklampt> in cluster <euler> at Fri Mar 26 00:14:59 2021
+Job was executed on host(s) <16*eu-g1-005-4>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 00:17:05 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/hist> was used as the working directory.
+Started at Fri Mar 26 00:17:05 2021
+Terminated at Fri Mar 26 00:17:26 2021
+Results reported at Fri Mar 26 00:17:26 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./hist_seq
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   19.65 sec.
+    Max Memory :                                 3816 MB
+    Average Memory :                             431.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               28952.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   20 sec.
+    Turnaround time :                            147 sec.
+
+The output (if any) follows:
+
+dist[0]=83
+dist[1]=3336
+dist[2]=85388
+dist[3]=1261851
+dist[4]=10880849
+dist[5]=54578074
+dist[6]=159827310
+dist[7]=273375792
+dist[8]=273376461
+dist[9]=159812042
+dist[10]=54580351
+dist[11]=10868349
+dist[12]=1261219
+dist[13]=85434
+dist[14]=3392
+dist[15]=69
+Time: 1.18193 sec
