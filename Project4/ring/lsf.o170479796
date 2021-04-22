@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@eu-c7-121-02>
+Subject: Job 170479796: <./sum_ring> in cluster <euler> Done
+
+Job <./sum_ring> was submitted from host <eu-login-17> by user <sklampt> in cluster <euler> at Thu Apr 22 14:44:36 2021
+Job was executed on host(s) <4*eu-c7-121-02>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Thu Apr 22 14:45:00 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/ring> was used as the working directory.
+Started at Thu Apr 22 14:45:00 2021
+Terminated at Thu Apr 22 14:45:02 2021
+Results reported at Thu Apr 22 14:45:02 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./sum_ring
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.13 sec.
+    Max Memory :                                 39 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               4057.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   27 sec.
+    Turnaround time :                            26 sec.
+
+The output (if any) follows:
+
+Process 0:	Sum = 0
