@@ -90,26 +90,34 @@ int main(int argc, char *argv[])
     // TODO: find your top/bottom/left/right neighbor using the new communicator, see MPI_Cart_shift()
     // rank_top, rank_bottom
     // rank_left, rank_right
-    MPI_Cart_shift(comm_cart, 0, 1, &rank_left, &rank_right);
-    MPI_Cart_shift(comm_cart, 1, 1, &rank_top, &rank_bottom);
+    MPI_Cart_shift(comm_cart, 0, 1, &rank_top, &rank_bottom);
+    MPI_Cart_shift(comm_cart, 1, 1, &rank_left, &rank_right);
 
-    MPI_Comm_rank(comm_cart, &rank);
+    //MPI_Comm_rank(comm_cart, &rank);
 
     //  TODO: create derived datatype data_ghost, create a datatype for sending the column, see MPI_Type_vector() and MPI_Type_commit()
     // data_ghost
-    MPI_Type_vector(1, 6, 0, MPI_DOUBLE, &data_ghost);
+    MPI_Type_vector(6, 1, 8, MPI_DOUBLE, &data_ghost);
     MPI_Type_commit(&data_ghost);
 
     //  TODO: ghost cell exchange with the neighbouring cells in all directions
     //  use MPI_Irecv(), MPI_Send(), MPI_Wait() or other viable alternatives
 
     //  to the top
-    
+    MPI_Send(data+9, 6, MPI_DOUBLE, rank_top, 0, MPI_COMM_WORLD);
+    MPI_Recv(data+7*8+1, 6, MPI_DOUBLE, rank_bottom, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
     //  to the bottom
-    
+    MPI_Send(data+6*8+1, 6, MPI_DOUBLE, rank_bottom, 0, MPI_COMM_WORLD);
+    MPI_Recv(data+1, 6, MPI_DOUBLE, rank_top, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
     //  to the left
-    
+    MPI_Send(data+8+1, 1, data_ghost, rank_left, 0, MPI_COMM_WORLD);
+    MPI_Recv(data+15, 1, data_ghost, rank_right, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
     //  to the right
+    MPI_Send(data+6+8, 1, data_ghost, rank_right, 0, MPI_COMM_WORLD);
+    MPI_Recv(data+8, 1, data_ghost, rank_left, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     
 
     if (rank==9) {

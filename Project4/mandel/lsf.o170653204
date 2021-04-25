@@ -1,0 +1,222 @@
+Sender: LSF System <lsfadmin@eu-g1-022-4>
+Subject: Job 170653204: <mpirun ./mandel_mpi> in cluster <euler> Done
+
+Job <mpirun ./mandel_mpi> was submitted from host <eu-login-38> by user <sklampt> in cluster <euler> at Sun Apr 25 15:57:47 2021
+Job was executed on host(s) <16*eu-g1-022-4>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Sun Apr 25 15:57:57 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/mandel> was used as the working directory.
+Started at Sun Apr 25 15:57:57 2021
+Terminated at Sun Apr 25 15:59:42 2021
+Results reported at Sun Apr 25 15:59:42 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./mandel_mpi
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   966.11 sec.
+    Max Memory :                                 225 MB
+    Average Memory :                             219.33 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               16159.00 MB
+    Max Swap :                                   -
+    Max Processes :                              19
+    Max Threads :                                56
+    Run time :                                   132 sec.
+    Turnaround time :                            115 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            eu-g1-022-4
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   eu-g1-022-4
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+Processor grid size (4, 4)
+[Process 0]: Coordinates [0, 0]
+[Process 0] Domain X: 0 -> 1023
+[Process 0] Domain Y: 0 -> 1023
+[Process 1]: Coordinates [0, 1]
+[Process 1] Domain X: 0 -> 1023
+[Process 1] Domain Y: 1024 -> 2047
+[Process 2]: Coordinates [0, 2]
+[Process 2] Domain X: 0 -> 1023
+[Process 2] Domain Y: 2048 -> 3071
+[Process 3]: Coordinates [0, 3]
+[Process 3] Domain X: 0 -> 1023
+[Process 3] Domain Y: 3072 -> 4095
+[Process 4]: Coordinates [1, 0]
+[Process 4] Domain X: 1024 -> 2047
+[Process 4] Domain Y: 0 -> 1023
+[Process 5]: Coordinates [1, 1]
+[Process 5] Domain X: 1024 -> 2047
+[Process 5] Domain Y: 1024 -> 2047
+[Process 6]: Coordinates [1, 2]
+[Process 6] Domain X: 1024 -> 2047
+[Process 6] Domain Y: 2048 -> 3071
+[Process 7]: Coordinates [1, 3]
+[Process 7] Domain X: 1024 -> 2047
+[Process 7] Domain Y: 3072 -> 4095
+[Process 8]: Coordinates [2, 0]
+[Process 8] Domain X: 2048 -> 3071
+[Process 8] Domain Y: 0 -> 1023
+[Process 9]: Coordinates [2, 1]
+[Process 9] Domain X: 2048 -> 3071
+[Process 9] Domain Y: 1024 -> 2047
+[Process 10]: Coordinates [2, 2]
+[Process 10] Domain X: 2048 -> 3071
+[Process 10] Domain Y: 2048 -> 3071
+[Process 11]: Coordinates [2, 3]
+[Process 11] Domain X: 2048 -> 3071
+[Process 11] Domain Y: 3072 -> 4095
+[Process 12]: Coordinates [3, 0]
+[Process 12] Domain X: 3072 -> 4095
+[Process 12] Domain Y: 0 -> 1023
+[Process 13]: Coordinates [3, 1]
+[Process 13] Domain X: 3072 -> 4095
+[Process 13] Domain Y: 1024 -> 2047
+[Process 14]: Coordinates [3, 2]
+[Process 14] Domain X: 3072 -> 4095
+[Process 14] Domain Y: 2048 -> 3071
+[Process 15]: Coordinates [3, 3]
+[Process 15] Domain X: 3072 -> 4095
+[Process 15] Domain Y: 3072 -> 4095
+[Process 0] Total time: 4.977 ms
+[Process 0] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 0] Total number of iterations: 592579
+[Process 0] Avg. time per pixel: 0.00474644 µs
+[Process 0] Avg. time per iteration: 0.00839888 µs
+[Process 0] Iterations/second: 1.19063e+08
+[Process 0] MFlop/s:                    952.508
+[Process 3] Total time: 6.024 ms
+[Process 3] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 3] Total number of iterations: 593783
+[Process 3] Avg. time per pixel: 0.00574493 µs
+[Process 3] Avg. time per iteration: 0.0101451 µs
+[Process 3] Iterations/second: 9.85696e+07
+[Process 3] MFlop/s:                    788.556
+[Process 4] Total time: 9.928 ms
+[Process 4] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 4] Total number of iterations: 1936758
+[Process 4] Avg. time per pixel: 0.00946808 µs
+[Process 4] Avg. time per iteration: 0.00512609 µs
+[Process 4] Iterations/second: 1.9508e+08
+[Process 4] MFlop/s:                    1560.64
+[Process 7] Total time: 9.927 ms
+[Process 7] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 7] Total number of iterations: 1938377
+[Process 7] Avg. time per pixel: 0.00946712 µs
+[Process 7] Avg. time per iteration: 0.00512129 µs
+[Process 7] Iterations/second: 1.95263e+08
+[Process 7] MFlop/s:                    1562.1
+[Process 12] Total time: 13.556 ms
+[Process 12] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 12] Total number of iterations: 2583248
+[Process 12] Avg. time per pixel: 0.012928 µs
+[Process 12] Avg. time per iteration: 0.00524766 µs
+[Process 12] Iterations/second: 1.90561e+08
+[Process 12] MFlop/s:                    1524.49
+[Process 15] Total time: 11.139 ms
+[Process 15] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 15] Total number of iterations: 2587282
+[Process 15] Avg. time per pixel: 0.010623 µs
+[Process 15] Avg. time per iteration: 0.00430529 µs
+[Process 15] Iterations/second: 2.32272e+08
+[Process 15] MFlop/s:                    1858.18
+[Process 1] Total time: 81.087 ms
+[Process 1] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 1] Total number of iterations: 23111363
+[Process 1] Avg. time per pixel: 0.0773306 µs
+[Process 1] Avg. time per iteration: 0.00350853 µs
+[Process 1] Iterations/second: 2.85019e+08
+[Process 1] MFlop/s:                    2280.15
+[Process 2] Total time: 185.446 ms
+[Process 2] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 2] Total number of iterations: 53986661
+[Process 2] Avg. time per pixel: 0.176855 µs
+[Process 2] Avg. time per iteration: 0.00343503 µs
+[Process 2] Iterations/second: 2.91118e+08
+[Process 2] MFlop/s:                    2328.94
+[eu-g1-022-4:93740] 15 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[eu-g1-022-4:93740] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[eu-g1-022-4:93740] 15 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[Process 8] Total time: 6367.08 ms
+[Process 8] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 8] Total number of iterations: 1903748770
+[Process 8] Avg. time per pixel: 6.07212 µs
+[Process 8] Avg. time per iteration: 0.00334449 µs
+[Process 8] Iterations/second: 2.98999e+08
+[Process 8] MFlop/s:                    2391.99
+[Process 11] Total time: 6397.8 ms
+[Process 11] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 11] Total number of iterations: 1912657983
+[Process 11] Avg. time per pixel: 6.10141 µs
+[Process 11] Avg. time per iteration: 0.00334498 µs
+[Process 11] Iterations/second: 2.98956e+08
+[Process 11] MFlop/s:                    2391.65
+[Process 5] Total time: 29680.2 ms
+[Process 5] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 5] Total number of iterations: 8908951372
+[Process 5] Avg. time per pixel: 28.3052 µs
+[Process 5] Avg. time per iteration: 0.0033315 µs
+[Process 5] Iterations/second: 3.00165e+08
+[Process 5] MFlop/s:                    2401.32
+[Process 6] Total time: 29799.9 ms
+[Process 6] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 6] Total number of iterations: 8944910606
+[Process 6] Avg. time per pixel: 28.4194 µs
+[Process 6] Avg. time per iteration: 0.00333149 µs
+[Process 6] Iterations/second: 3.00166e+08
+[Process 6] MFlop/s:                    2401.33
+[Process 14] Total time: 51377.1 ms
+[Process 14] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 14] Total number of iterations: 15328979768
+[Process 14] Avg. time per pixel: 48.997 µs
+[Process 14] Avg. time per iteration: 0.00335163 µs
+[Process 14] Iterations/second: 2.98362e+08
+[Process 14] MFlop/s:                    2386.9
+[Process 13] Total time: 51403.6 ms
+[Process 13] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 13] Total number of iterations: 15316050035
+[Process 13] Avg. time per pixel: 49.0223 µs
+[Process 13] Avg. time per iteration: 0.00335619 µs
+[Process 13] Iterations/second: 2.97957e+08
+[Process 13] MFlop/s:                    2383.65
+[Process 9] Total time: 102833 ms
+[Process 9] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 9] Total number of iterations: 30604499345
+[Process 9] Avg. time per pixel: 98.0693 µs
+[Process 9] Avg. time per iteration: 0.00336007 µs
+[Process 9] Iterations/second: 2.97613e+08
+[Process 9] MFlop/s:                    2380.91
+[Process 10] Total time: 103094 ms
+[Process 10] Image size: 1024 x 1024 = 1048576 Pixels
+[Process 10] Total number of iterations: 30631815139
+[Process 10] Avg. time per pixel: 98.318 µs
+[Process 10] Avg. time per iteration: 0.00336558 µs
+[Process 10] Iterations/second: 2.97125e+08
+[Process 10] MFlop/s:                    2377
