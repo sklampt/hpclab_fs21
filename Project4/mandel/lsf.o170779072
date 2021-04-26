@@ -1,0 +1,51 @@
+Sender: LSF System <lsfadmin@eu-ms-024-06>
+Subject: Job 170779072: <mpirun ./mandel_mpi> in cluster <euler> Exited
+
+Job <mpirun ./mandel_mpi> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 21:25:33 2021
+Job was executed on host(s) <eu-ms-024-06>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 21:25:59 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/mandel> was used as the working directory.
+Started at Mon Apr 26 21:25:59 2021
+Terminated at Mon Apr 26 21:30:56 2021
+Results reported at Mon Apr 26 21:30:56 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./mandel_mpi
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   295.00 sec.
+    Max Memory :                                 80 MB
+    Average Memory :                             72.83 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               944.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                11
+    Run time :                                   297 sec.
+    Turnaround time :                            323 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           eu-ms-024-06
+  Local device:         mlx4_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+Processor grid size (1, 1)
+[Process 0]: Coordinates [0, 0]
+[Process 0] Domain X: 0 -> 4095
+[Process 0] Domain Y: 0 -> 4095
+mpirun: Forwarding signal 18 to job

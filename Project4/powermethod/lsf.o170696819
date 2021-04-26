@@ -1,0 +1,62 @@
+Sender: LSF System <lsfadmin@eu-g1-027-3>
+Subject: Job 170696819: <mpirun ./powermethod> in cluster <euler> Done
+
+Job <mpirun ./powermethod> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 11:52:59 2021
+Job was executed on host(s) <16*eu-g1-027-3>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 11:53:15 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/powermethod> was used as the working directory.
+Started at Mon Apr 26 11:53:15 2021
+Terminated at Mon Apr 26 11:53:18 2021
+Results reported at Mon Apr 26 11:53:18 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./powermethod
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   18.78 sec.
+    Max Memory :                                 612 MB
+    Average Memory :                             -
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15772.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   10 sec.
+    Turnaround time :                            19 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            eu-g1-027-3
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   eu-g1-027-3
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+16, 4096, 1.0805
+[eu-g1-027-3:81727] 15 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[eu-g1-027-3:81727] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[eu-g1-027-3:81727] 15 more processes have sent help message help-mpi-btl-openib.txt / error in device init

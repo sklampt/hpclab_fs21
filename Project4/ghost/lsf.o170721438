@@ -1,0 +1,44 @@
+Sender: LSF System <lsfadmin@eu-c7-114-12>
+Subject: Job 170721438: <mpirun ./ghost> in cluster <euler> Done
+
+Job <mpirun ./ghost> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 19:44:31 2021
+Job was executed on host(s) <16*eu-c7-114-12>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 19:44:48 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/ghost> was used as the working directory.
+Started at Mon Apr 26 19:44:48 2021
+Terminated at Mon Apr 26 19:44:50 2021
+Results reported at Mon Apr 26 19:44:50 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./ghost
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1.33 sec.
+    Max Memory :                                 182 MB
+    Average Memory :                             -
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               16202.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   4 sec.
+    Turnaround time :                            19 sec.
+
+The output (if any) follows:
+
+data of rank 9 after communication
+9.0 5.0 5.0 5.0 5.0 5.0 5.0 9.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+8.0 9.0 9.0 9.0 9.0 9.0 9.0 10.0 
+9.0 13.0 13.0 13.0 13.0 13.0 13.0 9.0 

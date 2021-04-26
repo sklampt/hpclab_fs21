@@ -1,0 +1,64 @@
+Sender: LSF System <lsfadmin@eu-c7-112-08>
+Subject: Job 170706004: <#!/bin/bash; #offset added to x coordinate so that gnuplot does not overlap the bars;offset=0 ; rm -f perf.data;for np in 1 2 4 8 16;do;    echo "Computing Mandelbrot set with $np processes...";    mpirun -np $np ./mandel_mpi > tmp.txt;     for i in `seq 0 $((np-1))`;    do;        t=$(cat tmp.txt | grep "\[Process $i\] Total time" | cut -d ":" -f2 | cut -d " " -f2);        idx=$(echo $i + $offset | bc -l);        printf "$np $idx $t \n" >> perf.data;    done;    rm tmp.txt;     offset=$(echo $offset + 0.2 | bc -l);    printf "\n\n" >> perf.data;done; echo "Done."> in cluster <euler> Done
+
+Job <#!/bin/bash; #offset added to x coordinate so that gnuplot does not overlap the bars;offset=0 ; rm -f perf.data;for np in 1 2 4 8 16;do;    echo "Computing Mandelbrot set with $np processes...";    mpirun -np $np ./mandel_mpi > tmp.txt;     for i in `seq 0 $((np-1))`;    do;        t=$(cat tmp.txt | grep "\[Process $i\] Total time" | cut -d ":" -f2 | cut -d " " -f2);        idx=$(echo $i + $offset | bc -l);        printf "$np $idx $t \n" >> perf.data;    done;    rm tmp.txt;     offset=$(echo $offset + 0.2 | bc -l);    printf "\n\n" >> perf.data;done; echo "Done."> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 14:39:48 2021
+Job was executed on host(s) <16*eu-c7-112-08>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 14:40:22 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/mandel> was used as the working directory.
+Started at Mon Apr 26 14:40:22 2021
+Terminated at Mon Apr 26 15:03:58 2021
+Results reported at Mon Apr 26 15:03:58 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+
+#offset added to x coordinate so that gnuplot does not overlap the bars
+offset=0 
+
+rm -f perf.data
+for np in 1 2 4 8 16
+do
+    echo "Computing Mandelbrot set with $np processes..."
+    mpirun -np $np ./mandel_mpi > tmp.txt
+
+    for i in `seq 0 $((np-1))`
+    do
+        t=$(cat tmp.txt | grep "\[Process $i\] Total time" | cut -d ":" -f2 | cut -d " " -f2)
+        idx=$(echo $i + $offset | bc -l)
+        printf "$np $idx $t \n" >> perf.data
+    done
+    rm tmp.txt
+
+    offset=$(echo $offset + 0.2 | bc -l)
+    printf "\n\n" >> perf.data
+done
+
+echo "Done."
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4254.65 sec.
+    Max Memory :                                 257 MB
+    Average Memory :                             129.51 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               16127.00 MB
+    Max Swap :                                   -
+    Max Processes :                              20
+    Max Threads :                                57
+    Run time :                                   1440 sec.
+    Turnaround time :                            1450 sec.
+
+The output (if any) follows:
+
+Computing Mandelbrot set with 1 processes...
+Computing Mandelbrot set with 2 processes...
+Computing Mandelbrot set with 4 processes...
+Computing Mandelbrot set with 8 processes...
+Computing Mandelbrot set with 16 processes...
+Done.

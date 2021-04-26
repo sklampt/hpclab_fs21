@@ -1,0 +1,56 @@
+Sender: LSF System <lsfadmin@eu-ms-016-30>
+Subject: Job 170779366: <mpirun ./mandel_mpi> in cluster <euler> Done
+
+Job <mpirun ./mandel_mpi> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 21:34:03 2021
+Job was executed on host(s) <eu-ms-016-30>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 21:34:29 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/mandel> was used as the working directory.
+Started at Mon Apr 26 21:34:29 2021
+Terminated at Mon Apr 26 21:42:08 2021
+Results reported at Mon Apr 26 21:42:08 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./mandel_mpi
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   457.02 sec.
+    Max Memory :                                 140 MB
+    Average Memory :                             77.61 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               884.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                11
+    Run time :                                   459 sec.
+    Turnaround time :                            485 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           eu-ms-016-30
+  Local device:         mlx4_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+Processor grid size (1, 1)
+[Process 0]: Coordinates [0, 0]
+[Process 0] Domain X: 0 -> 4095
+[Process 0] Domain Y: 0 -> 4095
+[Process 0] Total time: 455936 ms
+[Process 0] Image size: 4096 x 4096 = 16777216 Pixels
+[Process 0] Total number of iterations: 113610974266
+[Process 0] Avg. time per pixel: 27.1759 µs
+[Process 0] Avg. time per iteration: 0.00401314 µs
+[Process 0] Iterations/second: 2.49182e+08
+[Process 0] MFlop/s:                    1993.45
