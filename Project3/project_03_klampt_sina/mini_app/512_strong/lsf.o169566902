@@ -1,0 +1,49 @@
+Sender: LSF System <lsfadmin@eu-c7-118-10>
+Subject: Job 169566902: <./main 512 100 0.01> in cluster <euler> Done
+
+Job <./main 512 100 0.01> was submitted from host <eu-login-20> by user <sklampt> in cluster <euler> at Mon Apr 12 21:06:07 2021
+Job was executed on host(s) <22*eu-c7-118-10>, in queue <normal.24h>, as user <sklampt> in cluster <euler> at Mon Apr 12 21:27:33 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project3/mini_app> was used as the working directory.
+Started at Mon Apr 12 21:27:33 2021
+Terminated at Mon Apr 12 21:27:39 2021
+Results reported at Mon Apr 12 21:27:39 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./main 512 100 0.01
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   114.74 sec.
+    Max Memory :                                 27 MB
+    Average Memory :                             25.00 MB
+    Total Requested Memory :                     22528.00 MB
+    Delta Memory :                               22501.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                25
+    Run time :                                   7 sec.
+    Turnaround time :                            1292 sec.
+
+The output (if any) follows:
+
+========================================================================
+                      Welcome to mini-stencil!
+version   :: OpenMP C++
+threads   :: 22
+mesh      :: 512 * 512 dx = 0.00195695
+time      :: 100 time steps from 0 .. 0.01
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+--------------------------------------------------------------------------------
+simulation took 5.21492 seconds
+20496 conjugate gradient iterations, at rate of 3930.26 iters/second
+706 newton iterations
+--------------------------------------------------------------------------------
+Goodbye!

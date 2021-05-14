@@ -1,0 +1,51 @@
+Sender: LSF System <lsfadmin@eu-ms-003-20>
+Subject: Job 170707484: <mpirun ./sum_ring> in cluster <euler> Done
+
+Job <mpirun ./sum_ring> was submitted from host <eu-login-27> by user <sklampt> in cluster <euler> at Mon Apr 26 15:02:47 2021
+Job was executed on host(s) <4*eu-ms-003-20>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Mon Apr 26 15:02:59 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/ring> was used as the working directory.
+Started at Mon Apr 26 15:02:59 2021
+Terminated at Mon Apr 26 15:03:00 2021
+Results reported at Mon Apr 26 15:03:00 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./sum_ring
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.37 sec.
+    Max Memory :                                 36 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               4060.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   11 sec.
+    Turnaround time :                            13 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           eu-ms-003-20
+  Local device:         mlx4_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+Process 0:	Sum = 6
+Process 1:	Sum = 6
+Process 2:	Sum = 6
+Process 3:	Sum = 6
+[eu-ms-003-20:09737] 3 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[eu-ms-003-20:09737] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

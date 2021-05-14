@@ -1,0 +1,37 @@
+Sender: LSF System <lsfadmin@eu-ms-004-41>
+Subject: Job 167356191: <./hist_seq> in cluster <euler> Exited
+
+Job <./hist_seq> was submitted from host <eu-login-14> by user <sklampt> in cluster <euler> at Fri Mar 26 20:19:15 2021
+Job was executed on host(s) <eu-ms-004-41>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 20:19:44 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/hist> was used as the working directory.
+Started at Fri Mar 26 20:19:44 2021
+Terminated at Fri Mar 26 20:20:09 2021
+Results reported at Fri Mar 26 20:20:09 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./hist_seq
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 137.
+
+Resource usage summary:
+
+    CPU time :                                   22.03 sec.
+    Max Memory :                                 3536 MB
+    Average Memory :                             2523.33 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -2512.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   38 sec.
+    Turnaround time :                            54 sec.
+
+The output (if any) follows:
+
+/cluster/shadow/.lsbatch/1616786355.167356191: line 8: 19177 Killed                  ./hist_seq

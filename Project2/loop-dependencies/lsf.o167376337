@@ -1,0 +1,39 @@
+Sender: LSF System <lsfadmin@eu-g1-054-4>
+Subject: Job 167376337: <./recur_seq> in cluster <euler> Done
+
+Job <./recur_seq> was submitted from host <eu-login-13> by user <sklampt> in cluster <euler> at Fri Mar 26 21:29:08 2021
+Job was executed on host(s) <4*eu-g1-054-4>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 21:29:23 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/loop-dependencies> was used as the working directory.
+Started at Fri Mar 26 21:29:23 2021
+Terminated at Fri Mar 26 21:29:33 2021
+Results reported at Fri Mar 26 21:29:33 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./recur_seq
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9.60 sec.
+    Max Memory :                                 15260 MB
+    Average Memory :                             14107.33 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               1124.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   15 sec.
+    Turnaround time :                            25 sec.
+
+The output (if any) follows:
+
+Sequential RunTime :  5.073996 seconds
+Final Result Sn    :  485165097.62511122 
+Result ||opt||^2_2 :  5884629305179574.000000
+

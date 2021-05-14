@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@eu-ms-015-03>
+Subject: Job 167355814: <./recur_seq> in cluster <euler> Exited
+
+Job <./recur_seq> was submitted from host <eu-login-14> by user <sklampt> in cluster <euler> at Fri Mar 26 20:18:13 2021
+Job was executed on host(s) <eu-ms-015-03>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 20:18:44 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/loop-dependencies> was used as the working directory.
+Started at Fri Mar 26 20:18:44 2021
+Terminated at Fri Mar 26 20:18:50 2021
+Results reported at Fri Mar 26 20:18:50 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./recur_seq
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   2.87 sec.
+    Max Memory :                                 3536 MB
+    Average Memory :                             3536.00 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -2512.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   16 sec.
+    Turnaround time :                            37 sec.
+
+The output (if any) follows:
+

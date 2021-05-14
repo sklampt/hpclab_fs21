@@ -1,0 +1,48 @@
+Sender: LSF System <lsfadmin@eu-ms-025-30>
+Subject: Job 169320313: <./main 128 100 0.005> in cluster <euler> Done
+
+Job <./main 128 100 0.005> was submitted from host <eu-login-22> by user <sklampt> in cluster <euler> at Sat Apr 10 23:37:31 2021
+Job was executed on host(s) <eu-ms-025-30>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Sat Apr 10 23:37:43 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project3/mini_app> was used as the working directory.
+Started at Sat Apr 10 23:37:43 2021
+Terminated at Sat Apr 10 23:37:45 2021
+Results reported at Sat Apr 10 23:37:45 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./main 128 100 0.005
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.08 sec.
+    Max Memory :                                 6 MB
+    Average Memory :                             -
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               1018.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   10 sec.
+    Turnaround time :                            14 sec.
+
+The output (if any) follows:
+
+========================================================================
+                      Welcome to mini-stencil!
+version   :: Serial C++
+mesh      :: 128 * 128 dx = 0.00787402
+time      :: 100 time steps from 0 .. 0.005
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+--------------------------------------------------------------------------------
+simulation took 0.000181653 seconds
+0 conjugate gradient iterations, at rate of 0 iters/second
+100 newton iterations
+--------------------------------------------------------------------------------
+Goodbye!

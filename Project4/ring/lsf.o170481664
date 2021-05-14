@@ -1,0 +1,65 @@
+Sender: LSF System <lsfadmin@eu-g1-033-1>
+Subject: Job 170481664: <mpirun ./sum_ring> in cluster <euler> Done
+
+Job <mpirun ./sum_ring> was submitted from host <eu-login-17> by user <sklampt> in cluster <euler> at Thu Apr 22 15:02:47 2021
+Job was executed on host(s) <4*eu-g1-033-1>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Thu Apr 22 15:03:08 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project4/ring> was used as the working directory.
+Started at Thu Apr 22 15:03:08 2021
+Terminated at Thu Apr 22 15:03:09 2021
+Results reported at Thu Apr 22 15:03:09 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./sum_ring
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.48 sec.
+    Max Memory :                                 58 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               4038.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   25 sec.
+    Turnaround time :                            22 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            eu-g1-033-1
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   eu-g1-033-1
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+Process 0:	Sum = 6
+Process 1:	Sum = 6
+Process 2:	Sum = 6
+Process 3:	Sum = 6
+[eu-g1-033-1:113868] 3 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[eu-g1-033-1:113868] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[eu-g1-033-1:113868] 3 more processes have sent help message help-mpi-btl-openib.txt / error in device init

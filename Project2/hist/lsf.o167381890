@@ -1,0 +1,52 @@
+Sender: LSF System <lsfadmin@eu-a6-008-18>
+Subject: Job 167381890: <./hist_omp> in cluster <euler> Done
+
+Job <./hist_omp> was submitted from host <eu-login-13> by user <sklampt> in cluster <euler> at Fri Mar 26 22:48:08 2021
+Job was executed on host(s) <16*eu-a6-008-18>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 22:48:58 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/hist> was used as the working directory.
+Started at Fri Mar 26 22:48:58 2021
+Terminated at Fri Mar 26 22:49:22 2021
+Results reported at Fri Mar 26 22:49:22 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./hist_omp
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   24.32 sec.
+    Max Memory :                                 3821 MB
+    Average Memory :                             497.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               28947.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   42 sec.
+    Turnaround time :                            74 sec.
+
+The output (if any) follows:
+
+dist[0]=83
+dist[1]=3336
+dist[2]=85388
+dist[3]=1261851
+dist[4]=10880849
+dist[5]=54578074
+dist[6]=159827310
+dist[7]=273375792
+dist[8]=273376461
+dist[9]=159812042
+dist[10]=54580351
+dist[11]=10868349
+dist[12]=1261219
+dist[13]=85434
+dist[14]=3392
+dist[15]=69
+Time: 0.152708 sec

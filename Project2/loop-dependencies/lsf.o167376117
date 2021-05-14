@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@eu-g1-013-1>
+Subject: Job 167376117: <./recur_se> in cluster <euler> Exited
+
+Job <./recur_se> was submitted from host <eu-login-13> by user <sklampt> in cluster <euler> at Fri Mar 26 21:28:46 2021
+Job was executed on host(s) <eu-g1-013-1>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 21:29:23 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/loop-dependencies> was used as the working directory.
+Started at Fri Mar 26 21:29:23 2021
+Terminated at Fri Mar 26 21:29:24 2021
+Results reported at Fri Mar 26 21:29:24 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./recur_se
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.09 sec.
+    Max Memory :                                 6 MB
+    Average Memory :                             -
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               2042.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            38 sec.
+
+The output (if any) follows:
+
+/cluster/shadow/.lsbatch/1616790526.167376117: line 8: ./recur_se: No such file or directory

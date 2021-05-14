@@ -1,0 +1,37 @@
+Sender: LSF System <lsfadmin@eu-ms-020-24>
+Subject: Job 167377809: <./recur_omp> in cluster <euler> Exited
+
+Job <./recur_omp> was submitted from host <eu-login-13> by user <sklampt> in cluster <euler> at Fri Mar 26 21:36:11 2021
+Job was executed on host(s) <eu-ms-020-24>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Fri Mar 26 21:36:22 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project2/loop-dependencies> was used as the working directory.
+Started at Fri Mar 26 21:36:22 2021
+Terminated at Fri Mar 26 21:36:34 2021
+Results reported at Fri Mar 26 21:36:34 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./recur_omp
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 137.
+
+Resource usage summary:
+
+    CPU time :                                   10.15 sec.
+    Max Memory :                                 14288 MB
+    Average Memory :                             11079.67 MB
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               -6096.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   39 sec.
+    Turnaround time :                            23 sec.
+
+The output (if any) follows:
+
+/cluster/shadow/.lsbatch/1616790971.167377809: line 8: 13888 Killed                  ./recur_omp
