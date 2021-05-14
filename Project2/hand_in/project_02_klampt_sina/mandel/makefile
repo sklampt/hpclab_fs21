@@ -1,0 +1,11 @@
+all: mandel_seq mandel_omp
+
+mandel_seq: mandel_seq.c pngwriter.c
+	gcc -o $@ -I. -O3 $^ -lpng
+
+mandel_seq: mandel_omp.c pngwriter.c
+	gcc -o $@ -I. -O3 $^ -lpng -fopenmp
+
+clean:
+	rm -rf mandel_seq mandel_omp
+
