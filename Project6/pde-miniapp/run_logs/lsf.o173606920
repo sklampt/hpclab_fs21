@@ -1,0 +1,1455 @@
+Sender: LSF System <lsfadmin@eu-a6-009-17>
+Subject: Job 173606920: <mpirun ./main 128 100 0.005 verbose> in cluster <euler> Exited
+
+Job <mpirun ./main 128 100 0.005 verbose> was submitted from host <eu-login-11> by user <sklampt> in cluster <euler> at Thu May 27 22:18:43 2021
+Job was executed on host(s) <8*eu-a6-009-17>, in queue <hpc.4h>, as user <sklampt> in cluster <euler> at Thu May 27 22:18:50 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp> was used as the working directory.
+Started at Thu May 27 22:18:50 2021
+Terminated at Thu May 27 22:18:52 2021
+Results reported at Thu May 27 22:18:52 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./main 128 100 0.005 verbose
+------------------------------------------------------------
+
+Exited with exit code 134.
+
+Resource usage summary:
+
+    CPU time :                                   0.56 sec.
+    Max Memory :                                 113 MB
+    Average Memory :                             -
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               8079.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   30 sec.
+    Turnaround time :                            9 sec.
+
+The output (if any) follows:
+
+rank 0/8 : (1,1) neigh N:S 2:-2 neigh E:W 1:-2 local dims 64 x 32
+rank 1/8 : (2,1) neigh N:S 3:-2 neigh E:W -2:0 local dims 64 x 32
+rank 2/8 : (1,2) neigh N:S 4:0 neigh E:W 3:-2 local dims 64 x 32
+rank 3/8 : (2,2) neigh N:S 5:1 neigh E:W -2:2 local dims 64 x 32
+rank 4/8 : (1,3) neigh N:S 6:2 neigh E:W 5:-2 local dims 64 x 32
+rank 5/8 : (2,3) neigh N:S 7:3 neigh E:W -2:4 local dims 64 x 32
+rank 6/8 : (1,4) neigh N:S -2:4 neigh E:W 7:-2 local dims 64 x 32
+rank 7/8 : (2,4) neigh N:S -2:5 neigh E:W -2:6 local dims 64 x 32
+========================================================================
+                      Welcome to mini-stencil!
+version   :: MPI : 8 MPI ranks
+mesh      :: 128 * 128 dx = 0.00787402
+time      :: 100 time steps from 0 .. 0.005
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+ERROR: CG failed to converge
+step 1 ERROR : nonlinear iterations failed to converge
+--------------------------------------------------------------------------------
+simulation took 0.00441677 seconds
+201 conjugate gradient iterations, at rate of 45508.3 iters/second
+1 newton iterations
+--------------------------------------------------------------------------------
+Goodbye!
+*** Error in `./main': free(): invalid next size (normal): 0x0000000001ae66c0 ***
+*** Error in `./main': free(): invalid next size (normal): 0x0000000002767fe0 ***
+*** Error in `./main': double free or corruption (!prev): 0x0000000002686660 ***
+*** Error in `./main': free(): invalid next size (normal): 0x0000000001a75580 ***
+*** Error in `./main': double free or corruption (!prev): 0x000000000102c6d0 ***
+*** Error in `./main': double free or corruption (!prev): 0x0000000000f20670 ***
+======= Backtrace: =========
+======= Backtrace: =========
+======= Backtrace: =========
+======= Backtrace: =========
+*** Error in `./main': free(): invalid next size (normal): 0x0000000000e71350 ***
+/lib64/libc.so.6(+0x81329)[0x2ba06f670329]
+/lib64/libc.so.6(+0x39d39)[0x2ba06f628d39]
+/lib64/libc.so.6(+0x81329)[0x2b449c8f9329]
+/lib64/libc.so.6(+0x39d39)[0x2b449c8b1d39]
+/lib64/libc.so.6(+0x81329)[0x2acee16e6329]
+/lib64/libc.so.6(+0x39d39)[0x2acee169ed39]
+/lib64/libc.so.6(+0x81329)[0x2ba5e35fc329]
+/lib64/libc.so.6(+0x39d39)[0x2ba5e35b4d39]
+======= Backtrace: =========
+======= Backtrace: =========
+/lib64/libc.so.6(+0x39d87)[0x2ba06f628d87]
+/lib64/libc.so.6(+0x39d87)[0x2ba5e35b4d87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2ba06f61155c]
+./main[0x40a16f]
+======= Memory map: ========
+/lib64/libc.so.6(+0x81329)[0x2adf3a36c329]
+/lib64/libc.so.6(+0x39d39)[0x2adf3a324d39]
+/lib64/libc.so.6(+0x81329)[0x2b1593dce329]
+/lib64/libc.so.6(+0x39d39)[0x2b1593d86d39]
+/lib64/libc.so.6(+0x39d87)[0x2b449c8b1d87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2b449c89a55c]
+./main[0x40a16f]
+======= Memory map: ========
+/lib64/libc.so.6(+0x39d87)[0x2acee169ed87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2acee168755c]
+./main[0x40a16f]
+======= Memory map: ========
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2ba5e359d55c]
+./main[0x40a16f]
+======= Memory map: ========
+*** Error in `./main': free(): invalid next size (normal): 0x0000000001e715e0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x39d87)[0x2adf3a324d87]
+/lib64/libc.so.6(+0x39d87)[0x2b1593d86d87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2b1593d6f55c]
+./main[0x40a16f]
+======= Memory map: ========
+00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+01790000-01b82000 rw-p 00000000 00:00 0                                  [heap]
+2acee0230000-2acee0252000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2acee0252000-2acee0254000 r-xp 00000000 00:00 0                          [vdso]
+2acee0254000-2acee0259000 rw-p 00000000 00:00 0 
+2acee0265000-2acee0266000 rw-p 00000000 00:00 0 
+2acee026a000-2acee0275000 rw-p 00000000 00:00 0 
+2acee0300000-2acee03a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2acee0421000-2acee0422000 rw-p 00000000 00:00 0 
+2acee0423000-2acee0424000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2acee0451000-2acee0452000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2acee0452000-2acee0453000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2acee0453000-2acee0454000 rw-p 00000000 00:00 0 
+2acee0454000-2acee046c000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2acee046c000-2acee066c000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2acee066c000-2acee066e000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2acee066e000-2acee066f000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2acee066f000-2acee074a000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2acee074a000-2acee094a000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2acee094a000-2acee094b000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2acee094b000-2acee095c000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2acee095c000-2acee096d000 rw-p 00000000 00:00 0 
+2acee096d000-2acee0af4000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2acee0af4000-2acee0cf4000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2acee0cf4000-2acee0cfe000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2acee0cfe000-2acee0d00000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2acee0d00000-2acee0d04000 rw-p 0000000400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+02422000-02814000 rw-p 00000000 00:00 0                                  [heap]
+2ba5e2146000-2ba5e2168000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba5e2168000-2ba5e216d000 rw-p 00000000 00:00 0 
+2ba5e2179000-2ba5e217a000 rw-p 00000000 00:00 0 
+2ba5e217e000-2ba5e2189000 rw-p 00000000 00:00 0 
+2ba5e2200000-2ba5e22a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2ba5e2333000-2ba5e2334000 rw-p 00000000 00:00 0 
+2ba5e233b000-2ba5e233c000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2ba5e2367000-2ba5e2368000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba5e2368000-2ba5e2369000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba5e2369000-2ba5e236a000 rw-p 00000000 00:00 0 
+2ba5e236a000-2ba5e2382000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba5e2382000-2ba5e2582000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba5e2582000-2ba5e2584000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba5e2584000-2ba5e2585000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba5e2585000-2ba5e2660000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba5e2660000-2ba5e2860000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba5e2860000-2ba5e2861000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba5e2861000-2ba5e2872000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba5e2872000-2ba5e2883000 rw-p 00000000 00:00 0 
+2ba5e2883000-2ba5e2a0a000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba5e2a0a000-2ba5e2c0a000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba5e2c0a000-2ba5e2c14000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba5e2c14000-2ba5e2c16000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba5e2c16000-2ba5e2c1a000 rw-p 00000000 00:00 0 
+2ba5e2c1a000-2ba5e2d1b000 r-xp 00000000 00:02 37253                00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+02330000-02722000 rw-p 00000000 00:00 0                                  [heap]
+2ba06e1ba000-2ba06e1dc000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba06e1dc000-2ba06e1e1000 rw-p 00000000 00:00 0 
+2ba06e1ed000-2ba06e1ee000 rw-p 00000000 00:00 0 
+2ba06e1f2000-2ba06e1fd000 rw-p 00000000 00:00 0 
+2ba06e200000-2ba06e2a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2ba06e3ad000-2ba06e3ae000 rw-p 00000000 00:00 0 
+2ba06e3af000-2ba06e3b0000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2ba06e3db000-2ba06e3dc000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba06e3dc000-2ba06e3dd000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2ba06e3dd000-2ba06e3de000 rw-p 00000000 00:00 0 
+2ba06e3de000-2ba06e3f6000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba06e3f6000-2ba06e5f6000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba06e5f6000-2ba06e5f8000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba06e5f8000-2ba06e5f9000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2ba06e5f9000-2ba06e6d4000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba06e6d4000-2ba06e8d4000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba06e8d4000-2ba06e8d5000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba06e8d5000-2ba06e8e6000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2ba06e8e6000-2ba06e8f7000 rw-p 00000000 00:00 0 
+2ba06e8f7000-2ba06ea7e000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba06ea7e000-2ba06ec7e000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba06ec7e000-2ba06ec88000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba06ec88000-2ba06ec8a000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2ba06ec8a000-2ba06ec8e000 rw-p 00000000 00:00 0 
+2ba06ec8e000-2ba06ed8f000 r-xp 00000000 00:02 37253                /lib64/libc.so.6(+0x81329)[0x2b8a8dbbe329]
+/lib64/libc.so.6(+0x39d39)[0x2b8a8db76d39]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2adf3a30d55c]
+./main[0x40a16f]
+======= Memory map: ========
+00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+00bca000-00fbc000 rw-p 00000000 00:00 0                                  [heap]
+2adf38eb6000-2adf38ed8000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2adf38ed8000-2adf38edd000 rw-p 00000000 00:00 0 
+2adf38ee9000-2adf38eea000 rw-p 00000000 00:00 0 
+2adf38eee000-2adf38ef9000 rw-p 00000000 00:00 0 
+2adf38f00000-2adf38fa0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2adf390a3000-2adf390a4000 rw-p 00000000 00:00 0 
+2adf390ab000-2adf390ac000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMP00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+0171f000-01b11000 rw-p 00000000 00:00 0                                  [heap]
+2b449b443000-2b449b465000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b449b465000-2b449b46a000 rw-p 00000000 00:00 0 
+2b449b476000-2b449b477000 rw-p 00000000 00:00 0 
+2b449b47b000-2b449b486000 rw-p 00000000 00:00 0 
+2b449b500000-2b449b5a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2b449b632000-2b449b633000 rw-p 00000000 00:00 0 
+2b449b638000-2b449b639000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2b449b664000-2b449b665000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b449b665000-2b449b666000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b449b666000-2b449b667000 rw-p 00000000 00:00 0 
+2b449b667000-2b449b67f000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b449b67f000-2b449b87f000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b449b87f000-2b449b881000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b449b881000-2b449b882000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b449b882000-2b449b95d000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b449b95d000-2b449bb5d000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b449bb5d000-2b449bb5e000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b449bb5e000-2b449bb6f000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b449bb6f000-2b449bb80000 rw-p 00000000 00:00 0 
+2b449bb80000-2b449bd07000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b449bd07000-2b449bf07000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b449bf07000-2b449bf11000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b449bf11000-2b449bf13000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b449bf13000-2b449bf17000 rw-p 00000000 00:00 0 
+2b449bf17000-2b449c018000 r-xp 00000000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b449c018000-2b449c217000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b449c217000-2b449c218000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b449c218000-2b449c219000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b449c219000-2b449c245000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b449c245000-2b449c445000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b449c445000-2b449c446000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b449c446000-2b449c45c000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b449c45c000-2b449c65b000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b449c65b000-2b449c65c000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+00cd6000-010c8000 rw-p 00000000 00:00 0                                  [heap]
+2b1592918000-2b159293a000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b159293a000-2b159293f000 rw-p 00000000 00:00 0 
+2b159294b000-2b159294c000 rw-p 00000000 00:00 0 
+2b1592950000-2b159295b000 rw-p 00000000 00:00 0 
+2b15929ea000-2b15929eb000 rw-p 00000000 00:00 0 
+2b15929ec000-2b15929ed000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.kMLl7R (deleted)
+2b1592a00000-2b1592aa0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2b1592b39000-2b1592b3a000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b1592b3a000-2b1592b3b000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b1592b3b000-2b1592b3c000 rw-p 00000000 00:00 0 
+2b1592b3c000-2b1592b54000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b1592b54000-2b1592d54000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b1592d54000-2b1592d56000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b1592d56000-2b1592d57000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b1592d57000-2b1592e32000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b1592e32000-2b1593032000 ---p 000db000 00:2a 86266569      000 00:00 0 
+2acee0d04000-2acee0e05000 r-xp 00000000 00:02 37253                      /usr/lib64/libm-2.17.so
+2acee0e05000-2acee1004000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2acee1004000-2acee1005000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2acee1005000-2acee1006000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2acee1006000-2acee1032000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2acee1032000-2acee1232000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2acee1232000-2acee1233000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2acee1233000-2acee1249000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2acee1249000-2acee1448000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2acee1448000-2acee1449000 rw-      /usr/lib64/libm-2.17.so
+2ba5e2d1b000-2ba5e2f1a000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba5e2f1a000-2ba5e2f1b000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba5e2f1b000-2ba5e2f1c000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba5e2f1c000-2ba5e2f48000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba5e2f48000-2ba5e3148000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba5e3148000-2ba5e3149000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba5e3149000-2ba5e315f000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2ba5e315f000-2ba5e335e000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2ba5e335e000-2ba5e335f000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc======= Backtrace: =========
+/lib64/libc.so.6(+0x81329)[0x2b0cdf855329]
+      /usr/lib64/libm-2.17.so
+2ba06ed8f000-2ba06ef8e000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba06ef8e000-2ba06ef8f000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba06ef8f000-2ba06ef90000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2ba06ef90000-2ba06efbc000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba06efbc000-2ba06f1bc000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba06f1bc000-2ba06f1bd000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2ba06f1bd000-2ba06f1d3000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2ba06f1d3000-2ba06f3d2000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2ba06f3d2000-2ba06f3d3000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2ba06f3d3000-2ba06f3ea000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba06f3ea000-2ba06f5e9000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba06f5e9000-2ba06f5ea000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba06f5ea000-2ba06f5eb000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba06f5eb000-2ba06f5ef000 rw-p 00000000 00:00 0 
+2ba06f5ef000-2ba06f6e4000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f6e4000-2ba06f6e5000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f6e5000-2ba06f6e7000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f6e7000-2ba06f6e9000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f6e9000-2ba06f6ee000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f6ee000-2ba06f6f0000 r-xp 000ff000 00:02 37237                   IO_output.bin (deleted)
+2adf390d7000-2adf390d8000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2adf390d8000-2adf390d9000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2adf390d9000-2adf390da000 rw-p 00000000 00:00 0 
+2adf390da000-2adf390f2000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2adf390f2000-2adf392f2000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2adf392f2000-2adf392f4000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2adf392f4000-2adf392f5000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2adf392f5000-2adf393d0000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2adf393d0000-2adf395d0000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2adf395d0000-2adf395d1000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2adf395d1000-2adf395e2000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2adf395e2000-2adf395f3000 rw-p 00000000 00:00 0 
+2adf395f3000-2adf3977a000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2adf3977a000-2adf3997a000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2adf3997a000-2adf39984000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2adf39984000-2adf39986000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2adf39986000-2adf3998a000 rw-p 00000000 00:00 0 
+2adf3998a000-2adf39a8b000 r-xp 00000000 00:02 37253                _s.so.1
+2b449c65c000-2b449c673000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b449c673000-2b449c872000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b449c872000-2b449c873000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b449c873000-2b449c874000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b449c874000-2b449c878000 rw-p 00000000 00:00 0 
+2b449c878000-2b449c96d000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c96d000-2b449c96e000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c96e000-2b449c970000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c970000-2b449c972000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c972000-2b449c977000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c977000-2b449c979000 r-xp 000ff000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449c979000-2b449ca3c000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449ca3c000-2b449cc3b000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449cc3b000-2b449cc3f000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449cc3f000-2b449cc41000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b449cc41000-2b449cc46000 rw-p 00000000 00:00 0 
+2b449cc46000-2b449ccf1000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b449ccf1000-2b449cef0000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b449cef0000-2b449cef2000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b449cef2000-2b449cef6000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b449cef6000-2b449cef8000 rw-p 00000000 00:00 0 
+2b449cef8000-2b449cfe4000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b449cfe4000-2b449d1e3000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b449d1e3000-2b449d1e6000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b449d1e6000-2b449d1ec000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b449d1ec000-2b449d1f3000 rw-p 00000000 00:00 0 
+2b449d1f3000-2b449d1f5000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b449d1f5000-2b449d3f5000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b449d3f5000-2b449d3f6000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b449d3f6000-2b449d3f7000 rw-p 00003000              /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b1593032000-2b1593033000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b1593033000-2b1593044000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b1593044000-2b1593055000 rw-p 00000000 00:00 0 
+2b1593055000-2b15931dc000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b15931dc000-2b15933dc000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b15933dc000-2b15933e6000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b15933e6000-2b15933e8000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b15933e8000-2b15933ec000 rw-p 00000000 00:00 0 
+2b15933ec000-2b15934ed000 r-xp 00000000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b15934ed000-2b15936ec000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b15936ec000-2b15936ed000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b15936ed000-2b15936ee000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b15936ee000-2b159371a000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b159371a000-2b159391a000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b159391a000-2b159391b000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b159391b000-2b1593931000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b1593931000-2b1593b30000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b1593b30000-2b1593b31000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b1593b31000-2b1593b48000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b1593b48000-2b1593d47000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b1593d47000-2b1593d48000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b1593d48000-2b1593d49000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b1593d49000-2b1593d4d000 rw-p 00000000 00:00 0 
+2b1593d4d000-2b1593e42000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593e42000-2b1593e43000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593e43000-2b1593e45000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593e45000-2b1593e47000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593e47000-2b1593e4c000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593e4c000-2b1593e4e000 r-xp 000ff000 00:02 37237                      /usr/lip 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2acee1449000-2acee1460000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2acee1460000-2acee165f000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2acee165f000-2acee1660000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2acee1660000-2acee1661000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2acee1661000-2acee1665000 rw-p 00000000 00:00 0 
+2acee1665000-2acee175a000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee175a000-2acee175b000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee175b000-2acee175d000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee175d000-2acee175f000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee175f000-2acee1764000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1764000-2acee1766000 r-xp 000ff000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1766000-2acee1829000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1829000-2acee1a28000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1a28000-2acee1a2c000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1a2c000-2acee1a2e000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2acee1a2e000-2acee1a33000 rw-p 00000000 00:00 0 
+2acee1a33000-2acee1ade000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2acee1ade000-2acee1cdd000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2acee1cdd000-2acee1cdf000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2acee1cdf000-2acee1ce3000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2acee1ce3000-2acee1ce5000 rw-p 00000000 00:00 0 
+2acee1ce5000-2acee1dd1000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2acee1dd1000-2acee1fd0000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2acee1fd0000-2acee1fd3000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2acee1fd3000-2acee1fd9000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2acee1fd9000-2acee1fe0000 rw-p 00000000 00:00 0 
+2acee1fe0000-2acee1fe2000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2acee1fe2000-2acee21e2000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2acee21e2000-2acee21e3000 r--p 00002000 00:02 37249       _s.so.1
+2ba5e335f000-2ba5e3376000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba5e3376000-2ba5e3575000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba5e3575000-2ba5e3576000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba5e3576000-2ba5e3577000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2ba5e3577000-2ba5e357b000 rw-p 00000000 00:00 0 
+2ba5e357b000-2ba5e3670000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3670000-2ba5e3671000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3671000-2ba5e3673000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3673000-2ba5e3675000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3675000-2ba5e367a000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e367a000-2ba5e367c000 r-xp 000ff000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e367c000-2ba5e373f000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e373f000-2ba5e393e000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e393e000-2ba5e3942000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3942000-2ba5e3944000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba5e3944000-2ba5e3949000 rw-p 00000000 00:00 0 
+2ba5e3949000-2ba5e39f4000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba5e39f4000-2ba5e3bf3000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba5e3bf3000-2ba5e3bf5000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba5e3bf5000-2ba5e3bf9000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba5e3bf9000-2ba5e3bfb000 rw-p 00000000 00:00 0 
+2ba5e3bfb000-2ba5e3ce7000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba5e3ce7000-2ba5e3ee6000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba5e3ee6000-2ba5e3ee9000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba5e3ee9000-2ba5e3eef000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba5e3eef000-2ba5e3ef6000 rw-p 00000000 00:00 0 
+2ba5e3ef6000-2ba5e3ef8000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba5e3ef8000-2ba5e40f8000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba5e40f8000-2ba5e40f9000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba5e40f9000-2ba5e40fa000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba5e40fa000-2ba5e4104000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba5e4104000-2ba5e4304000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba5e4304000-2ba5e4305000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba5e4305000-2ba5e4306000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba5e4306000-2ba5e431a000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba5e431a000-2ba5e451a000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba5e451a000-2ba5e451b000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba5e451b000-2ba5e451c000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba5e451c000-2ba5e4523000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba5e4523000-2ba5e4722000 ---p 00007000 00:02 37460         /lib64/libc.so.6(+0x39d39)[0x2b0cdf80dd39]
+/lib64/libc.so.6(+0x39d87)[0x2b0cdf80dd87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2b0cdf7f655c]
+./main[0x40a16f]
+======= Memory map: ========
+/lib64/libc.so.6(+0x39d87)[0x2b8a8db76d87]
+/lib64/libc.so.6(__libc_start_main+0xfc)[0x2b8a8db5f55c]
+./main[0x40a16f]
+======= Memory map: ========
+   /usr/lib64/libc-2.17.so
+2ba06f6f0000-2ba06f7b3000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f7b3000-2ba06f9b2000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f9b2000-2ba06f9b6000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f9b6000-2ba06f9b8000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2ba06f9b8000-2ba06f9bd000 rw-p 00000000 00:00 0 
+2ba06f9bd000-2ba06fa68000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba06fa68000-2ba06fc67000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba06fc67000-2ba06fc69000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba06fc69000-2ba06fc6d000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2ba06fc6d000-2ba06fc6f000 rw-p 00000000 00:00 0 
+2ba06fc6f000-2ba06fd5b000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba06fd5b000-2ba06ff5a000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba06ff5a000-2ba06ff5d000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba06ff5d000-2ba06ff63000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2ba06ff63000-2ba06ff6a000 rw-p 00000000 00:00 0 
+2ba06ff6a000-2ba06ff6c000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba06ff6c000-2ba07016c000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba07016c000-2ba07016d000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba07016d000-2ba07016e000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2ba07016e000-2ba070178000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba070178000-2ba070378000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba070378000-2ba070379000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba070379000-2ba07037a000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2ba07037a000-2ba07038e000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba07038e000-2ba07058e000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba07058e000-2ba07058f000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba07058f000-2ba070590000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2ba070590000-2ba070597000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba070597000-2ba070796000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba070796000-2ba070797000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba070797000-2ba070798000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba070798000-2ba07079a000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba07079a000-2ba070999000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba070999000-2ba07099a000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba07099a000-2ba07099b000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba07099b000-2ba0709b0000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba0709b0000-2ba070baf000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba070baf000-2ba070bb0000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba070bb0000-2ba070bb1000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.      /usr/lib64/libm-2.17.so
+2adf39a8b000-2adf39c8a000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2adf39c8a000-2adf39c8b000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2adf39c8b000-2adf39c8c000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2adf39c8c000-2adf39cb8000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2adf39cb8000-2adf39eb8000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2adf39eb8000-2adf39eb9000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2adf39eb9000-2adf39ecf000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2adf39ecf000-2adf3a0ce000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2adf3a0ce000-2adf3a0cf000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2adf3a0cf000-2adf3a0e6000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2adf3a0e6000-2adf3a2e5000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2adf3a2e5000-2adf3a2e6000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2adf3a2e6000-2adf3a2e7000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2adf3a2e7000-2adf3a2eb000 rw-p 00000000 00:00 0 
+2adf3a2eb000-2adf3a3e0000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3e0000-2adf3a3e1000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3e1000-2adf3a3e3000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3e3000-2adf3a3e5000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3e5000-2adf3a3ea000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3ea000-2adf3a3ec000 r-xp 000ff000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a3ec000-2adf3a4af000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a4af000-2adf3a6ae000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a6ae000-2adf3a6b2000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a6b2000-2adf3a6b4000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2adf3a6b4000-2adf3a6b9000 rw-p 00000000 00:00 0 
+2adf3a6b9000-2adf3a764000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2adf3a764000-2adf3a963000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2adf3a963000-2adf3a965000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2adf3a965000-2adf3a969000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2adf3a969000-2adf3a96b000 rw-p 00000000 00:00 0 
+2adf3a96b000-2adf3aa57000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2adf3aa57000-2adf3ac56000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2adf3ac56000-2adf3ac59000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2adf3ac59000-2adf3ac5f000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2adf3ac5f000-2adf3ac66000 rw-p 00000000 00:00 0 
+2adf3ac66000-2adf3ac68000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2adf3ac68000-2adf3ae68000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2adf3ae68000-2adf3ae69000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2adf3ae69000-2adf3ae6a000 rw-p 00003000 7
+2ba070bb1000-2ba070bb5000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba070bb5000-2ba070db4000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba070db4000-2ba070db5000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba070db5000-2ba070db6000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba070db6000-2ba070e04000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba070e04000-2ba071004000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba071004000-2ba071006000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba071006000-2ba071007000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba071007000-2ba07100b000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba07100b000-2ba07120a000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba07120a000-2ba07120b000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba07120b000-2ba07120c000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba07120c000-2ba071223000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba071223000-2ba071422000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba071422000-2ba071423000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba071423000-2ba071424000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba071424000-2ba071449000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba071449000-2ba071648000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba071648000-2ba071649000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba071649000-2ba07164a000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba07164a000-2ba071659000 r-xp 00000000 00:02 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b449d3f7000-2b449d401000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b449d401000-2b449d601000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b449d601000-2b449d602000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b449d602000-2b449d603000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b449d603000-2b449d617000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b449d617000-2b449d817000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b449d817000-2b449d818000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b449d818000-2b449d819000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b449d819000-2b449d820000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b449d820000-2b449da1f000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b449da1f000-2b449da20000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b449da20000-2b449da21000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b449da21000-2b449da23000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b449da23000-2b449dc22000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b449dc22000-2b449dc23000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b449dc23000-2b449dc24000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b449dc24000-2b449dc39000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b449dc39000-2b449de38000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b449de38000-2b449de39000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b449de39000-2b449de3a000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b449de3a000-2b449de3e000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b449de3e000-2b449e03d000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b449e03d000-2b449e03e000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b449e03e000-2b449e03f000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b449e03f000-2b449e08d000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b449e08d000-2b449e28d000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b449e28d000-2b449e28f000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b449e28f000-2b449e290000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b449e290000-2b449e294000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b449e294000-2b449e493000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b449e493000-2b449e494000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b449e494000-2b449e495000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b449e495000-2b449e4ac000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b449e4ac000-2b449e6ab000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b449e6ab000-2b449e6ac000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b449e6ac000-2b449e6ad000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b449e6ad000-2b449e6d2000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b449e6d2000-2b449e8d1000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b449e8d1000-2b449e8d2000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b449e8d2000-2b449e8d3000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b449e8d3000-2b449e8e2000 r-xp 00000000 00:02 b64/libc-2.17.so
+2b1593e4e000-2b1593f11000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1593f11000-2b1594110000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1594110000-2b1594114000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1594114000-2b1594116000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b1594116000-2b159411b000 rw-p 00000000 00:00 0 
+2b159411b000-2b15941c6000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b15941c6000-2b15943c5000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b15943c5000-2b15943c7000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b15943c7000-2b15943cb000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b15943cb000-2b15943cd000 rw-p 00000000 00:00 0 
+2b15943cd000-2b15944b9000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b15944b9000-2b15946b8000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b15946b8000-2b15946bb000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b15946bb000-2b15946c1000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b15946c1000-2b15946c8000 rw-p 00000000 00:00 0 
+2b15946c8000-2b15946ca000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b15946ca000-2b15948ca000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b15948ca000-2b15948cb000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b15948cb000-2b15948cc000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b15948cc000-2b15948d6000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b15948d6000-2b1594ad6000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b1594ad6000-2b1594ad7000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b1594ad7000-2b1594ad8000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b1594ad8000-2b1594aec000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b1594aec000-2b1594cec000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b1594cec000-2b1594ced000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b1594ced000-2b1594cee000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b1594cee000-2b1594cf5000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b1594cf5000-2b1594ef4000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b1594ef4000-2b1594ef5000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b1594ef5000-2b1594ef6000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b1594ef6000-2b1594ef8000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b1594ef8000-2b15950f7000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b15950f7000-2b15950f8000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b15950f8000-2b15950f9000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b15950f9000-2b159510e000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b159510e000-2b159530d000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b159530d000-2b159530e000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b159530e000-2b159530f000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b159530               /usr/lib64/libdl-2.17.so
+2acee21e3000-2acee21e4000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2acee21e4000-2acee21ee000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2acee21ee000-2acee23ee000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2acee23ee000-2acee23ef000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2acee23ef000-2acee23f0000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2acee23f0000-2acee2404000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2acee2404000-2acee2604000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2acee2604000-2acee2605000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2acee2605000-2acee2606000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2acee2606000-2acee260d000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2acee260d000-2acee280c000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2acee280c000-2acee280d000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2acee280d000-2acee280e000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2acee280e000-2acee2810000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2acee2810000-2acee2a0f000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2acee2a0f000-2acee2a10000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2acee2a10000-2acee2a11000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2acee2a11000-2acee2a26000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2acee2a26000-2acee2c25000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2acee2c25000-2acee2c26000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2acee2c26000-2acee2c27000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2acee2c27000-2acee2c2b000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2acee2c2b000-2acee2e2a000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2acee2e2a000-2acee2e2b000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2acee2e2b000-2acee2e2c000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2acee2e2c000-2acee2e7a000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2acee2e7a000-2acee307a000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2acee307a000-2acee307c000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2acee307c000-2acee307d000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2acee307d000-2acee3081000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2acee3081000-2acee3280000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2acee3280000-2acee3281000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2acee3281000-2acee3282000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2acee3282000-2acee3299000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2acee3299000-2acee3498000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2acee3498000-2acee3499000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2acee3499000-2acee349a000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2acee349a000-2acee34bf000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2acee34bf000-2acee36be000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2acee36be000-2acee36bf000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2acee36bf000-2acee36c0000 rw-p 00025000 00:02 36963                             /usr/lib64/librt-2.17.so
+2ba5e4722000-2ba5e4723000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba5e4723000-2ba5e4724000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2ba5e4724000-2ba5e4726000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba5e4726000-2ba5e4925000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba5e4925000-2ba5e4926000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba5e4926000-2ba5e4927000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2ba5e4927000-2ba5e493c000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba5e493c000-2ba5e4b3b000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba5e4b3b000-2ba5e4b3c000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba5e4b3c000-2ba5e4b3d000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2ba5e4b3d000-2ba5e4b41000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba5e4b41000-2ba5e4d40000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba5e4d40000-2ba5e4d41000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba5e4d41000-2ba5e4d42000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2ba5e4d42000-2ba5e4d90000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba5e4d90000-2ba5e4f90000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba5e4f90000-2ba5e4f92000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba5e4f92000-2ba5e4f93000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2ba5e4f93000-2ba5e4f97000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba5e4f97000-2ba5e5196000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba5e5196000-2ba5e5197000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba5e5197000-2ba5e5198000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2ba5e5198000-2ba5e51af000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba5e51af000-2ba5e53ae000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba5e53ae000-2ba5e53af000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba5e53af000-2ba5e53b0000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2ba5e53b0000-2ba5e53d5000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba5e53d5000-2ba5e55d4000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba5e55d4000-2ba5e55d5000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba5e55d5000-2ba5e55d6000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2ba5e55d6000-2ba5e55e5000 r-xp 00000000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba5e55e5000-2ba5e57e4000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba5e57e4000-2ba5e57e5000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba5e57e5000-2ba5e57e6000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba5e6403000-2ba5e6404000 ---p 00000000 00:00 0 
+2ba5e6404000-2ba5e6604000 rw-p 00000000 00:00 0 
+2ba5e70d9000-2ba5e70da000 ---p 00000000 00:00 0 
+2ba5e70da000-2ba5e72da000 rw-p 00000000 00:00 0 
+2ba5e8000000-2ba5e8021000 rw-p 00000000 00:00 0 
+2ba5e8021000-2ba5ec000000 ---p 00000000 00:00 0 
+2ba5ec000000-2ba5ec021000 rw-p 00000000 00:00 0 
+2ba5ec021000-2ba5f0000000 ---p 00000000 00:00 0 
+2ba5f164d000-2ba5f1665000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba5f1665000-2ba5f1864000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba5f1864000-2ba5f1865000 r--p 00017000 00:02 41772                   00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+01b1b000-01f0c000 rw-p 00000000 00:00 0                                  [heap]
+2b0cde39f000-2b0cde3c1000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b0cde3c1000-2b0cde3c6000 rw-p 00000000 00:00 0 
+2b0cde3d2000-2b0cde3d3000 rw-p 00000000 00:00 0 
+2b0cde3d7000-2b0cde3e2000 rw-p 00000000 00:00 0 
+2b0cde400000-2b0cde4a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2b0cde4ed000-2b0cde4ee000 rw-p 00000000 00:00 0 
+2b0cde4ef000-2b0cde4f0000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2b0cde5c0000-2b0cde5c1000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b0cde5c1000-2b0cde5c2000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b0cde5c2000-2b0cde5c3000 rw-p 00000000 00:00 0 
+2b0cde5c3000-2b0cde5db000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b0cde5db000-2b0cde7db000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b0cde7db000-2b0cde7dd000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b0cde7dd000-2b0cde7de000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b0cde7de000-2b0cde8b9000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b0cde8b9000-2b0cdeab9000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b0cdeab9000-2b0cdeaba000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b0cdeaba000-2b0cdeacb000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b0cdeacb000-2b0cdeadc000 rw-p 00000000 00:00 0 
+2b0cdeadc000-2b0cdec63000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b0cdec63000-2b0cdee63000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b0cdee63000-2b0cdee6d000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b0cdee6d000-2b0cdee6f000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b0cdee6f000-2b0cdee73000 rw-p 00000000 00:00 0 
+2b0cdee73000-2b0cdef74000 r-xp 00000000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b0cdef74000-2b0cdf173000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b0cdf173000-2b0cdf174000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b0cdf174000-2b0cdf175000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b0cdf175000-2b0cdf1a1000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b0cdf1a1000-2b0cdf3a1000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b0cdf3a1000-2b0cdf3a2000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b0cdf3a2000-2b0cdf3b8000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b0cdf3b8000-2b0cdf5b7000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b0cdf5b7000-2b0cdf5b8000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc00400000-00416000 r-xp 00000000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00615000-00616000 r--p 00015000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00616000-00617000 rw-p 00016000 00:2c 86988201                           /cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp/main
+00617000-00618000 rw-p 00000000 00:00 0 
+00b1b000-00f0d000 rw-p 00000000 00:00 0                                  [heap]
+2b8a8c708000-2b8a8c72a000 r-xp 00000000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b8a8c72a000-2b8a8c72f000 rw-p 00000000 00:00 0 
+2b8a8c73b000-2b8a8c73c000 rw-p 00000000 00:00 0 
+2b8a8c740000-2b8a8c74b000 rw-p 00000000 00:00 0 
+2b8a8c7da000-2b8a8c7db000 rw-p 00000000 00:00 0 
+2b8a8c7dc000-2b8a8c7dd000 rw-s 00000000 00:10 35450331                   /dev/shm/sem.OMPIO_output.bin (deleted)
+2b8a8c800000-2b8a8c8a0000 rw-s 0fd14000 00:05 134447                     /dev/infiniband/uverbs0
+2b8a8c929000-2b8a8c92a000 r--p 00021000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b8a8c92a000-2b8a8c92b000 rw-p 00022000 00:02 36964                      /usr/lib64/ld-2.17.so
+2b8a8c92b000-2b8a8c92c000 rw-p 00000000 00:00 0 
+2b8a8c92c000-2b8a8c944000 r-xp 00000000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b8a8c944000-2b8a8cb44000 ---p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b8a8cb44000-2b8a8cb46000 r--p 00018000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b8a8cb46000-2b8a8cb47000 rw-p 0001a000 00:2a 75902154                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi_cxx.so.40.0.0
+2b8a8cb47000-2b8a8cc22000 r-xp 00000000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b8a8cc22000-2b8a8ce22000 ---p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b8a8ce22000-2b8a8ce23000 r--p 000db000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b8a8ce23000-2b8a8ce34000 rw-p 000dc000 00:2a 86266569                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40.0.0
+2b8a8ce34000-2b8a8ce45000 rw-p 00000000 00:00 0 
+2b8a8ce45000-2b8a8cfcc000 r-xp 00000000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b8a8cfcc000-2b8a8d1cc000 ---p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b8a8d1cc000-2b8a8d1d6000 r--p 00187000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b8a8d1d6000-2b8a8d1d8000 rw-p 00191000 00:2a 73328197                   /cluster/apps/gcc/6.3.0/lib64/libstdc++.so.6.0.22
+2b8a8d1d8000-2b8a8d1dc000 rw-p 00000000 00:00 0 
+2b8a8d1dc000-2b8a8d2dd000 r-xp 00000000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b8a8d2dd000-2b8a8d4dc000 ---p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b8a8d4dc000-2b8a8d4dd000 r--p 00100000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b8a8d4dd000-2b8a8d4de000 rw-p 00101000 00:02 37253                      /usr/lib64/libm-2.17.so
+2b8a8d4de000-2b8a8d50a000 r-xp 00000000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b8a8d50a000-2b8a8d70a000 ---p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b8a8d70a000-2b8a8d70b000 rw-p 0002c000 00:2a 82934666                   /cluster/apps/gcc/6.3.0/lib64/libgomp.so.1.0.0
+2b8a8d70b000-2b8a8d721000 r-xp 00000000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b8a8d721000-2b8a8d920000 ---p 00016000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc_s.so.1
+2b8a8d920000-2b8a8d921000 rw-p 00015000 00:2a 73328191                   /cluster/apps/gcc/6.3.0/lib64/libgcc00:02 37249                      /usr/lib64/libdl-2.17.so
+2adf3ae6a000-2adf3ae74000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2adf3ae74000-2adf3b074000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2adf3b074000-2adf3b075000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2adf3b075000-2adf3b076000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2adf3b076000-2adf3b08a000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2adf3b08a000-2adf3b28a000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2adf3b28a000-2adf3b28b000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2adf3b28b000-2adf3b28c000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2adf3b28c000-2adf3b293000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2adf3b293000-2adf3b492000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2adf3b492000-2adf3b493000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2adf3b493000-2adf3b494000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2adf3b494000-2adf3b496000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2adf3b496000-2adf3b695000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2adf3b695000-2adf3b696000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2adf3b696000-2adf3b697000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2adf3b697000-2adf3b6ac000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2adf3b6ac000-2adf3b8ab000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2adf3b8ab000-2adf3b8ac000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2adf3b8ac000-2adf3b8ad000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2adf3b8ad000-2adf3b8b1000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2adf3b8b1000-2adf3bab0000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2adf3bab0000-2adf3bab1000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2adf3bab1000-2adf3bab2000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2adf3bab2000-2adf3bb00000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2adf3bb00000-2adf3bd00000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2adf3bd00000-2adf3bd02000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2adf3bd02000-2adf3bd03000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2adf3bd03000-2adf3bd07000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2adf3bd07000-2adf3bf06000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2adf3bf06000-2adf3bf07000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2adf3bf07000-2adf3bf08000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2adf3bf08000-2adf3bf1f000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2adf3bf1f000-2adf3c11e000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2adf3c11e000-2adf3c11f000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2adf3c11f000-2adf3c120000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2adf3c120000-2adf3c145000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2adf3c145000-2adf3c344000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2adf3c344000-2adf3c345000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2adf3c345000-2adf3c346000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2adf3c346000-2adf3c355000 r-xp 00000000 00:02 _s.so.1
+2b8a8d921000-2b8a8d938000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b8a8d938000-2b8a8db37000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b8a8db37000-2b8a8db38000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b8a8db38000-2b8a8db39000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b8a8db39000-2b8a8db3d000 rw-p 00000000 00:00 0 
+2b8a8db3d000-2b8a8dc32000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dc32000-2b8a8dc33000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dc33000-2b8a8dc35000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dc35000-2b8a8dc37000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dc37000-2b8a8dc3c000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dc3c000-2b8a8dc3e000 r-xp 000ff000 00:02 37237                   37238                      /usr/lib64/libbz2.so.1.0.6
+2ba071659000-2ba071858000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba071858000-2ba071859000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba071859000-2ba07185a000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2ba072477000-2ba072478000 ---p 00000000 00:00 0 
+2ba072478000-2ba072678000 rw-p 00000000 00:00 0 
+2ba07314d000-2ba07314e000 ---p 00000000 00:00 0 
+2ba07314e000-2ba07334e000 rw-p 00000000 00:00 0 
+2ba074000000-2ba074021000 rw-p 00000000 00:00 0 
+2ba074021000-2ba078000000 ---p 00000000 00:00 0 
+2ba078000000-2ba078021000 rw-p 00000000 00:00 0 
+2ba078021000-2ba07c000000 ---p 00000000 00:00 0 
+2ba07d64d000-2ba07d665000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba07d665000-2ba07d864000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba07d864000-2ba07d865000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba07d865000-2ba07d866000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba07d866000-2ba07d8ca000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba07d8ca000-2ba07dac9000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba07dac9000-2ba07dacc000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba07dacc000-2ba07dad1000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba07dad1000-2ba07dad3000 rw-p 00000000 00:00 0 
+2ba07dad3000-2ba07daf1000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba07daf1000-2ba07dcf1000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba07dcf1000-2ba07dcf3000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba07dcf3000-2ba07dcf4000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba07dcf4000-2ba07dd4d000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba07dd4d000-2ba07df4c000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba07df4c000-2ba07df4d000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba07df4d000-2ba07df4f000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba07df4f000-2ba07df53000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba07df53000-2ba07e152000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba07e152000-2ba07e153000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba07e153000-2ba07e154000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba07e154000-2ba07e176000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba07e176000-2ba07e376000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba07e376000-2ba07e377000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba07e377000-2ba07e379000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba07e400000-2ba07e600000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2ba07e600000-2ba07e800000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffc74c46000-7ffc74ccf000 rw-p 00000000 00:00 0                          [stack]
+7ffc74d5c000-7ffc74d5e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20457] *** Process received signal ***
+37238                      /usr/lib64/libbz2.so.1.0.6
+2b449e8e2000-2b449eae1000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b449eae1000-2b449eae2000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b449eae2000-2b449eae3000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b449f700000-2b449f701000 ---p 00000000 00:00 0 
+2b449f701000-2b449f901000 rw-p 00000000 00:00 0 
+2b44a0000000-2b44a0021000 rw-p 00000000 00:00 0 
+2b44a0021000-2b44a4000000 ---p 00000000 00:00 0 
+2b44a4405000-2b44a4406000 ---p 00000000 00:00 0 
+2b44a4406000-2b44a4606000 rw-p 00000000 00:00 0 
+2b44a685a000-2b44a6872000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b44a6872000-2b44a6a71000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b44a6a71000-2b44a6a72000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b44a6a72000-2b44a6a73000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b44a6a73000-2b44a6ad7000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b44a6ad7000-2b44a6cd6000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b44a6cd6000-2b44a6cd9000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b44a6cd9000-2b44a6cde000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b44a6cde000-2b44a6ce0000 rw-p 00000000 00:00 0 
+2b44a6ce0000-2b44a6cfe000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b44a6cfe000-2b44a6efe000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b44a6efe000-2b44a6f00000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b44a6f00000-2b44a6f01000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b44a6f01000-2b44a6f5a000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b44a6f5a000-2b44a7159000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b44a7159000-2b44a715a000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b44a715a000-2b44a715c000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b44a715c000-2b44a7160000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b44a7160000-2b44a735f000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b44a735f000-2b44a7360000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b44a7360000-2b44a7361000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b44a7361000-2b44a7383000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b44a7383000-2b44a7583000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b44a7583000-2b44a7584000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b44a7584000-2b44a7586000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b44a7600000-2b44a7800000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2b44a7800000-2b44a7a00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2b44a8000000-2b44a8021000 rw-p 00000000 00:00 0 
+2b44a8021000-2b44ac000000 ---p 00000000 00:00 0 
+7fffd53d8000-7fffd5461000 rw-p 00000000 00:00 0                          [stack]
+7fffd5598000-7fffd559a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20458] *** Process received signal ***
+f000-2b1595313000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b1595313000-2b1595512000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b1595512000-2b1595513000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b1595513000-2b1595514000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b1595514000-2b1595562000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b1595562000-2b1595762000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b1595762000-2b1595764000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b1595764000-2b1595765000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b1595765000-2b1595769000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b1595769000-2b1595968000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b1595968000-2b1595969000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b1595969000-2b159596a000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b159596a000-2b1595981000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b1595981000-2b1595b80000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b1595b80000-2b1595b81000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b1595b81000-2b1595b82000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b1595b82000-2b1595ba7000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b1595ba7000-2b1595da6000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b1595da6000-2b1595da7000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b1595da7000-2b1595da8000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b1595da8000-2b1595db7000 r-xp 00000000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b1595db7000-2b1595fb6000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b1595fb6000-2b1595fb7000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b1595fb7000-2b1595fb8000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b1596bd5000-2b1596bd6000 ---p 00000000 00:00 0 
+2b1596bd6000-2b1596dd6000 rw-p 00000000 00:00 0 
+2b15978ab000-2b15978ac000 ---p 00000000 00:00 0 
+2b15978ac000-2b1597aac000 rw-p 00000000 00:00 0 
+2b1598000000-2b1598021000 rw-p 00000000 00:00 0 
+2b1598021000-2b159c000000 ---p 00000000 00:00 0 
+2b159c000000-2b159c021000 rw-p 00000000 00:00 0 
+2b159c021000-2b15a0000000 ---p 00000000 00:00 0 
+2b15a1e54000-2b15a1e6c000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b15a1e6c000-2b15a206b000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b15a206b000-2b15a206c000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b15a206c000-2b15a206d000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b15a206d000-2b15a20d1000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b15a20d1000-2b15a22d0000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b15a22d0000-2b15a22d3000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b15a22d3000-2b15a22d8000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b15a22d8000-2b15a22da000 rw-p 00000000 00:00 0 
+2b15a22da000-2b15a22f8000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b15a22f8000-2b15a24f8000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b15a24f8000-2b15a24fa000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b15a24fa000-2b15a24fb000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.      /usr/lib64/liblzma.so.5.2.2
+2acee36c0000-2acee36cf000 r-xp 00000000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2acee36cf000-2acee38ce000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2acee38ce000-2acee38cf000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2acee38cf000-2acee38d0000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2acee44ed000-2acee44ee000 ---p 00000000 00:00 0 
+2acee44ee000-2acee46ee000 rw-p 00000000 00:00 0 
+2acee51c3000-2acee51c4000 ---p 00000000 00:00 0 
+2acee51c4000-2acee53c4000 rw-p 00000000 00:00 0 
+2acee7618000-2acee7630000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2acee7630000-2acee782f000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2acee782f000-2acee7830000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2acee7830000-2acee7831000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2acee7831000-2acee7895000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2acee7895000-2acee7a94000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2acee7a94000-2acee7a97000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2acee7a97000-2acee7a9c000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2acee7a9c000-2acee7a9e000 rw-p 00000000 00:00 0 
+2acee7a9e000-2acee7abc000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2acee7abc000-2acee7cbc000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2acee7cbc000-2acee7cbe000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2acee7cbe000-2acee7cbf000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2acee7cbf000-2acee7d18000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2acee7d18000-2acee7f17000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2acee7f17000-2acee7f18000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2acee7f18000-2acee7f1a000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2acee8000000-2acee8021000 rw-p 00000000 00:00 0 
+2acee8021000-2aceec000000 ---p 00000000 00:00 0 
+2aceec000000-2aceec021000 rw-p 00000000 00:00 0 
+2aceec021000-2acef0000000 ---p 00000000 00:00 0 
+2acef0000000-2acef0004000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2acef0004000-2acef0203000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2acef0203000-2acef0204000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2acef0204000-2acef0205000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2acef0205000-2acef0227000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2acef0227000-2acef0427000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2acef0427000-2acef0428000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2acef0428000-2acef042a000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2acef0600000-2acef0800000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2acef0800000-2acef0a00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7fff1e766000-7fff1e7f0000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20454] *** Process received signal ***
+[eu-a6-009-17:20454] Signal: Aborted (6)
+[eu-a6-009-17:20454] Signal code:  (-6)
+   /usr/lib64/libibverbs.so.1.0.0
+2ba5f1865000-2ba5f1866000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2ba5f1866000-2ba5f18ca000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba5f18ca000-2ba5f1ac9000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba5f1ac9000-2ba5f1acc000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba5f1acc000-2ba5f1ad1000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2ba5f1ad1000-2ba5f1ad3000 rw-p 00000000 00:00 0 
+2ba5f1ad3000-2ba5f1af1000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba5f1af1000-2ba5f1cf1000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba5f1cf1000-2ba5f1cf3000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba5f1cf3000-2ba5f1cf4000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2ba5f1cf4000-2ba5f1d4d000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba5f1d4d000-2ba5f1f4c000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba5f1f4c000-2ba5f1f4d000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba5f1f4d000-2ba5f1f4f000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2ba5f1f4f000-2ba5f1f53000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba5f1f53000-2ba5f2152000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba5f2152000-2ba5f2153000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba5f2153000-2ba5f2154000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2ba5f2154000-2ba5f2176000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba5f2176000-2ba5f2376000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba5f2376000-2ba5f2377000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba5f2377000-2ba5f2379000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2ba5f2400000-2ba5f2600000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2ba5f2600000-2ba5f2800000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffd3a5c6000-7ffd3a64f000 rw-p 00000000 00:00 0                          [stack]
+7ffd3a65c000-7ffd3a65e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20456] *** Process received signal ***
+[eu-a6-009-17:20456] Signal: Aborted (6)
+[eu-a6-009-17:20456] Signal code:  (-6)
+_s.so.1
+2b0cdf5b8000-2b0cdf5cf000 r-xp 00000000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b0cdf5cf000-2b0cdf7ce000 ---p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b0cdf7ce000-2b0cdf7cf000 r--p 00016000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b0cdf7cf000-2b0cdf7d0000 rw-p 00017000 00:02 37449                      /usr/lib64/libpthread-2.17.so
+2b0cdf7d0000-2b0cdf7d4000 rw-p 00000000 00:00 0 
+2b0cdf7d4000-2b0cdf8c9000 r-xp 00000000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8c9000-2b0cdf8ca000 r-xp 000f5000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8ca000-2b0cdf8cc000 r-xp 000f6000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8cc000-2b0cdf8ce000 r-xp 000f8000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8ce000-2b0cdf8d3000 r-xp 000fa000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8d3000-2b0cdf8d5000 r-xp 000ff000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf8d5000-2b0cdf998000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdf998000-2b0cdfb97000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdfb97000-2b0cdfb9b000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdfb9b000-2b0cdfb9d000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b0cdfb9d000-2b0cdfba2000 rw-p 00000000 00:00 0 
+2b0cdfba2000-2b0cdfc4d000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b0cdfc4d000-2b0cdfe4c000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b0cdfe4c000-2b0cdfe4e000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b0cdfe4e000-2b0cdfe52000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b0cdfe52000-2b0cdfe54000 rw-p 00000000 00:00 0 
+2b0cdfe54000-2b0cdff40000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b0cdff40000-2b0ce013f000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b0ce013f000-2b0ce0142000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b0ce0142000-2b0ce0148000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b0ce0148000-2b0ce014f000 rw-p 00000000 00:00 0 
+2b0ce014f000-2b0ce0151000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b0ce0151000-2b0ce0351000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b0ce0351000-2b0ce0352000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b0ce0352000-2b0ce0353000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b0ce0353000-2b0ce035d000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b0ce035d000-2b0ce055d000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b0ce055d000-2b0ce055e000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b0ce055e000-2b0ce055f000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b0ce055f000-2b0ce0573000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b0ce0573000-2b0ce0773000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b0ce0773000-2b0ce0774000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b0ce0774000-2b0ce0775000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b0ce0775000-2b0ce077c000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b0ce077c000-2b0ce097b000 ---p 00007000 00:02 37460         37238                      /usr/lib64/libbz2.so.1.0.6
+2adf3c355000-2adf3c554000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2adf3c554000-2adf3c555000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2adf3c555000-2adf3c556000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2adf3d173000-2adf3d174000 ---p 00000000 00:00 0 
+2adf3d174000-2adf3d374000 rw-p 00000000 00:00 0 
+2adf3de49000-2adf3de4a000 ---p 00000000 00:00 0 
+2adf3de4a000-2adf3e04a000 rw-p 00000000 00:00 0 
+2adf40000000-2adf40021000 rw-p 00000000 00:00 0 
+2adf40021000-2adf44000000 ---p 00000000 00:00 0 
+2adf44000000-2adf44021000 rw-p 00000000 00:00 0 
+2adf44021000-2adf48000000 ---p 00000000 00:00 0 
+2adf48417000-2adf4842f000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2adf4842f000-2adf4862e000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2adf4862e000-2adf4862f000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2adf4862f000-2adf48630000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2adf48630000-2adf48694000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2adf48694000-2adf48893000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2adf48893000-2adf48896000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2adf48896000-2adf4889b000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2adf4889b000-2adf4889d000 rw-p 00000000 00:00 0 
+2adf4889d000-2adf488bb000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2adf488bb000-2adf48abb000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2adf48abb000-2adf48abd000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2adf48abd000-2adf48abe000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2adf48abe000-2adf48b17000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2adf48b17000-2adf48d16000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2adf48d16000-2adf48d17000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2adf48d17000-2adf48d19000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2adf48d19000-2adf48d1d000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2adf48d1d000-2adf48f1c000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2adf48f1c000-2adf48f1d000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2adf48f1d000-2adf48f1e000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2adf48f1e000-2adf48f40000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2adf48f40000-2adf49140000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2adf49140000-2adf49141000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2adf49141000-2adf49143000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2adf49200000-2adf49400000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2adf49400000-2adf49600000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffc58336000-7ffc583bf000 rw-p 00000000 00:00 0                          [stack]
+7ffc583ea000-7ffc583ec000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20451] *** Process received signal ***
+[eu-a6-009-17:20451] Signal: Aborted (6)
+[eu-a6-009-17:20451] Signal code:  (-6)
+             /usr/lib64/librt-2.17.so
+2b0ce097b000-2b0ce097c000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b0ce097c000-2b0ce097d000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b0ce097d000-2b0ce097f000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b0ce097f000-2b0ce0b7e000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b0ce0b7e000-2b0ce0b7f000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b0ce0b7f000-2b0ce0b80000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b0ce0b80000-2b0ce0b95000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b0ce0b95000-2b0ce0d94000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b0ce0d94000-2b0ce0d95000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b0ce0d95000-2b0ce0d96000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b0ce0d96000-2b0ce0d9a000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b0ce0d9a000-2b0ce0f99000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b0ce0f99000-2b0ce0f9a000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b0ce0f9a000-2b0ce0f9b000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b0ce0f9b000-2b0ce0fe9000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b0ce0fe9000-2b0ce11e9000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b0ce11e9000-2b0ce11eb000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b0ce11eb000-2b0ce11ec000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b0ce11ec000-2b0ce11f0000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b0ce11f0000-2b0ce13ef000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b0ce13ef000-2b0ce13f0000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b0ce13f0000-2b0ce13f1000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b0ce13f1000-2b0ce1408000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b0ce1408000-2b0ce1607000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b0ce1607000-2b0ce1608000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b0ce1608000-2b0ce1609000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b0ce1609000-2b0ce162e000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b0ce162e000-2b0ce182d000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b0ce182d000-2b0ce182e000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b0ce182e000-2b0ce182f000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b0ce182f000-2b0ce183e000 r-xp 00000000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b0ce183e000-2b0ce1a3d000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b0ce1a3d000-2b0ce1a3e000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b0ce1a3e000-2b0ce1a3f000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b0ce265c000-2b0ce265d000 ---p 00000000 00:00 0 
+2b0ce265d000-2b0ce285d000 rw-p 00000000 00:00 0 
+2b0ce3332000-2b0ce3333000 ---p 00000000 00:00 0 
+2b0ce3333000-2b0ce3533000 rw-p 00000000 00:00 0 
+2b0ce4000000-2b0ce4021000 rw-p 00000000 00:00 0 
+2b0ce4021000-2b0ce8000000 ---p 00000000 00:00 0 
+2b0ce8000000-2b0ce8021000 rw-p 00000000 00:00 0 
+2b0ce8021000-2b0cec000000 ---p 00000000 00:00 0 
+2b0ced851000-2b0ced869000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b0ced869000-2b0ceda68000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b0ceda68000-2b0ceda69000 r--p 00017000 00:02 41772                      /usr/lib64/libc-2.17.so
+2b8a8dc3e000-2b8a8dd01000 r-xp 00101000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8dd01000-2b8a8df00000 ---p 001c4000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8df00000-2b8a8df04000 r--p 001c3000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8df04000-2b8a8df06000 rw-p 001c7000 00:02 37237                      /usr/lib64/libc-2.17.so
+2b8a8df06000-2b8a8df0b000 rw-p 00000000 00:00 0 
+2b8a8df0b000-2b8a8dfb6000 r-xp 00000000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b8a8dfb6000-2b8a8e1b5000 ---p 000ab000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b8a8e1b5000-2b8a8e1b7000 r--p 000aa000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b8a8e1b7000-2b8a8e1bb000 rw-p 000ac000 00:2a 84902957                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-rte.so.40.0.0
+2b8a8e1bb000-2b8a8e1bd000 rw-p 00000000 00:00 0 
+2b8a8e1bd000-2b8a8e2a9000 r-xp 00000000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b8a8e2a9000-2b8a8e4a8000 ---p 000ec000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b8a8e4a8000-2b8a8e4ab000 r--p 000eb000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b8a8e4ab000-2b8a8e4b1000 rw-p 000ee000 00:2a 91772267                   /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libopen-pal.so.40.0.0
+2b8a8e4b1000-2b8a8e4b8000 rw-p 00000000 00:00 0 
+2b8a8e4b8000-2b8a8e4ba000 r-xp 00000000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b8a8e4ba000-2b8a8e6ba000 ---p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b8a8e6ba000-2b8a8e6bb000 r--p 00002000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b8a8e6bb000-2b8a8e6bc000 rw-p 00003000 00:02 37249                      /usr/lib64/libdl-2.17.so
+2b8a8e6bc000-2b8a8e6c6000 r-xp 00000000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b8a8e6c6000-2b8a8e8c6000 ---p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b8a8e8c6000-2b8a8e8c7000 r--p 0000a000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b8a8e8c7000-2b8a8e8c8000 rw-p 0000b000 00:02 41708                      /usr/lib64/libnuma.so.1.0.0
+2b8a8e8c8000-2b8a8e8dc000 r-xp 00000000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b8a8e8dc000-2b8a8eadc000 ---p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b8a8eadc000-2b8a8eadd000 r--p 00014000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b8a8eadd000-2b8a8eade000 rw-p 00015000 00:02 39058                      /usr/lib64/libudev.so.1.6.2
+2b8a8eade000-2b8a8eae5000 r-xp 00000000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b8a8eae5000-2b8a8ece4000 ---p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b8a8ece4000-2b8a8ece5000 r--p 00006000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b8a8ece5000-2b8a8ece6000 rw-p 00007000 00:02 37460                      /usr/lib64/librt-2.17.so
+2b8a8ece6000-2b8a8ece8000 r-xp 00000000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b8a8ece8000-2b8a8eee7000 ---p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b8a8eee7000-2b8a8eee8000 r--p 00001000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b8a8eee8000-2b8a8eee9000 rw-p 00002000 00:02 36921                      /usr/lib64/libutil-2.17.so
+2b8a8eee9000-2b8a8eefe000 r-xp 00000000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b8a8eefe000-2b8a8f0fd000 ---p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b8a8f0fd000-2b8a8f0fe000 r--p 00014000 00:02 38339                      /usr/lib64/libz.so.1.2.7
+2b8a8f0fe000-2b8a8f0ff000 rw-p 00015000 00:02 38339                      /usr/lib64/libz.so.1.2.[eu-a6-009-17:20457] Signal: Aborted (6)
+[eu-a6-009-17:20457] Signal code:  (-6)
+[eu-a6-009-17:20457] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2ba06f3e2630]
+[eu-a6-009-17:20457] [ 1] [eu-a6-009-17:20458] Signal: Aborted (6)
+[eu-a6-009-17:20458] Signal code:  (-6)
+[eu-a6-009-17:20458] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2b449c66b630]
+[eu-a6-009-17:20458] [ 1] 200.23.0
+2b15a24fb000-2b15a2554000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b15a2554000-2b15a2753000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b15a2753000-2b15a2754000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b15a2754000-2b15a2756000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b15a2756000-2b15a275a000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b15a275a000-2b15a2959000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b15a2959000-2b15a295a000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b15a295a000-2b15a295b000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b15a295b000-2b15a297d000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b15a297d000-2b15a2b7d000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b15a2b7d000-2b15a2b7e000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b15a2b7e000-2b15a2b80000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b15a2c00000-2b15a2e00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2b15a2e00000-2b15a3000000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffdb65c7000-7ffdb6651000 rw-p 00000000 00:00 0                          [stack]
+7ffdb6750000-7ffdb6752000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20460] *** Process received signal ***
+[eu-a6-009-17:20460] Signal: Aborted (6)
+[eu-a6-009-17:20460] Signal code:  (-6)
+[eu-a6-009-17:20460] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2b1593b40630]
+[eu-a6-009-17:20460] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b1593d833d7]
+[eu-a6-009-17:20460] [eu-a6-009-17:20451] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2adf3a0de630]
+[eu-a6-009-17:20451] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2adf3a3213d7]
+[eu-a6-009-17:20451] [ 2]    /usr/lib64/libibverbs.so.1.0.0
+2b0ceda69000-2b0ceda6a000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b0ceda6a000-2b0cedace000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b0cedace000-2b0cedccd000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b0cedccd000-2b0cedcd0000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b0cedcd0000-2b0cedcd5000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b0cedcd5000-2b0cedcd7000 rw-p 00000000 00:00 0 
+2b0cedcd7000-2b0cedcf5000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b0cedcf5000-2b0cedef5000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b0cedef5000-2b0cedef7000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b0cedef7000-2b0cedef8000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b0cedef8000-2b0cedf51000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b0cedf51000-2b0cee150000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b0cee150000-2b0cee151000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b0cee151000-2b0cee153000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b0cee153000-2b0cee157000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b0cee157000-2b0cee356000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b0cee356000-2b0cee357000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b0cee357000-2b0cee358000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b0cee358000-2b0cee37a000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b0cee37a000-2b0cee57a000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b0cee57a000-2b0cee57b000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b0cee57b000-2b0cee57d000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b0cee600000-2b0cee800000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2b0cee800000-2b0ceea00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffee6436000-7ffee64be000 rw-p 00000000 00:00 0                          [stack]
+7ffee65dd000-7ffee65df000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20450] *** Process received signal ***
+7
+2b8a8f0ff000-2b8a8f103000 r-xp 00000000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b8a8f103000-2b8a8f302000 ---p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b8a8f302000-2b8a8f303000 r--p 00003000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b8a8f303000-2b8a8f304000 rw-p 00004000 00:02 38434                      /usr/lib64/libcap.so.2.22
+2b8a8f304000-2b8a8f352000 r-xp 00000000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b8a8f352000-2b8a8f552000 ---p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b8a8f552000-2b8a8f554000 r--p 0004e000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b8a8f554000-2b8a8f555000 rw-p 00050000 00:02 38753                      /usr/lib64/libdw-0.176.so
+2b8a8f555000-2b8a8f559000 r-xp 00000000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b8a8f559000-2b8a8f758000 ---p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b8a8f758000-2b8a8f759000 r--p 00003000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b8a8f759000-2b8a8f75a000 rw-p 00004000 00:02 38422                      /usr/lib64/libattr.so.1.1.0
+2b8a8f75a000-2b8a8f771000 r-xp 00000000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b8a8f771000-2b8a8f970000 ---p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b8a8f970000-2b8a8f971000 r--p 00016000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b8a8f971000-2b8a8f972000 rw-p 00017000 00:02 37473                      /usr/lib64/libelf-0.176.so
+2b8a8f972000-2b8a8f997000 r-xp 00000000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b8a8f997000-2b8a8fb96000 ---p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b8a8fb96000-2b8a8fb97000 r--p 00024000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b8a8fb97000-2b8a8fb98000 rw-p 00025000 00:02 36963                      /usr/lib64/liblzma.so.5.2.2
+2b8a8fb98000-2b8a8fba7000 r-xp 00000000 00:02 /lib64/libc.so.6(gsignal+0x37)[0x2ba06f6253d7]
+[eu-a6-009-17:20457] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ba06f626ac8]
+[eu-a6-009-17:20457] [ 3] /lib64/libc.so.6(+0x78f67)[0x2ba06f667f67]
+[eu-a6-009-17:20457] [ 4] /lib64/libc.so.6(gsignal+0x37)[0x2b449c8ae3d7]
+[eu-a6-009-17:20458] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b449c8afac8]
+[eu-a6-009-17:20458] [ 3] /lib64/libc.so.6(+0x78f67)[0x2b449c8f0f67]
+[eu-a6-009-17:20458] [ 4] [eu-a6-009-17:20454] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2acee1458630]
+[eu-a6-009-17:20454] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2acee169b3d7]
+[eu-a6-009-17:20454] [ 2] /lib64/libc.so.6(abort+0x148)[0x2acee169cac8]
+[eu-a6-009-17:20454] [ 3] /lib64/libc.so.6(+0x78f67)[0x2acee16ddf67]
+[eu-a6-009-17:20454] [ 4] [eu-a6-009-17:20456] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2ba5e336e630]
+[eu-a6-009-17:20456] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ba5e35b13d7]
+[eu-a6-009-17:20456] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ba5e35b2ac8]
+[eu-a6-009-17:20456] [ 3] /lib64/libc.so.6(+0x78f67)[0x2ba5e35f3f67]
+[eu-a6-009-17:20456] [ 4] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b1593d84ac8]
+[eu-a6-009-17:20460] [ 3] /lib64/libc.so.6(+0x78f67)[0x2b1593dc5f67]
+[eu-a6-009-17:20460] [ 4] /lib64/libc.so.6(+0x81329)[0x2b1593dce329]
+[eu-a6-009-17:20460] [ 5] /lib64/libc.so.6(+0x81329)[0x2ba5e35fc329]
+[eu-a6-009-17:20456] [ 5] /lib64/libc.so.6(abort+0x148)[0x2adf3a322ac8]
+[eu-a6-009-17:20451] [ 3] /lib64/libc.so.6(+0x78f67)[0x2adf3a363f67]
+[eu-a6-009-17:20451] [ 4] /lib64/libc.so.6(+0x81329)[0x2adf3a36c329]
+[eu-a6-009-17:20451] [ 5] /lib64/libc.so.6(+0x39d39)[0x2adf3a324d39]
+[eu-a6-009-17:20451] [ 6] [eu-a6-009-17:20450] Signal: Aborted (6)
+[eu-a6-009-17:20450] Signal code:  (-6)
+[eu-a6-009-17:20450] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2b0cdf5c7630]
+[eu-a6-009-17:20450] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b0cdf80a3d7]
+[eu-a6-009-17:20450] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b0cdf80bac8]
+[eu-a6-009-17:20450] [ 3] 37238                      /usr/lib64/libbz2.so.1.0.6
+2b8a8fba7000-2b8a8fda6000 ---p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b8a8fda6000-2b8a8fda7000 r--p 0000e000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b8a8fda7000-2b8a8fda8000 rw-p 0000f000 00:02 37238                      /usr/lib64/libbz2.so.1.0.6
+2b8a909c5000-2b8a909c6000 ---p 00000000 00:00 0 
+2b8a909c6000-2b8a90bc6000 rw-p 00000000 00:00 0 
+2b8a9169b000-2b8a9169c000 ---p 00000000 00:00 0 
+2b8a9169c000-2b8a9189c000 rw-p 00000000 00:00 0 
+2b8a93af0000-2b8a93b08000 r-xp 00000000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b8a93b08000-2b8a93d07000 ---p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b8a93d07000-2b8a93d08000 r--p 00017000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b8a93d08000-2b8a93d09000 rw-p 00018000 00:02 41772                      /usr/lib64/libibverbs.so.1.0.0
+2b8a93d09000-2b8a93d6d000 r-xp 00000000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b8a93d6d000-2b8a93f6c000 ---p 00064000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b8a93f6c000-2b8a93f6f000 r--p 00063000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b8a93f6f000-2b8a93f74000 rw-p 00066000 00:02 41763                      /usr/lib64/libnl-route-3.so.200.23.0
+2b8a93f74000-2b8a93f76000 rw-p 00000000 00:00 0 
+2b8a94000000-2b8a94021000 rw-p 00000000 00:00 0 
+2b8a94021000-2b8a98000000 ---p 00000000 00:00 0 
+2b8a98000000-2b8a98021000 rw-p 00000000 00:00 0 
+2b8a98021000-2b8a9c000000 ---p 00000000 00:00 0 
+2b8a9c000000-2b8a9c01e000 r-xp 00000000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b8a9c01e000-2b8a9c21e000 ---p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b8a9c21e000-2b8a9c220000 r--p 0001e000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b8a9c220000-2b8a9c221000 rw-p 00020000 00:02 41742                      /usr/lib64/libnl-3.so.200.23.0
+2b8a9c221000-2b8a9c27a000 r-xp 00000000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b8a9c27a000-2b8a9c479000 ---p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b8a9c479000-2b8a9c47a000 r--p 00058000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b8a9c47a000-2b8a9c47c000 rw-p 00059000 00:02 41780                      /usr/lib64/libmlx5.so.1.0.0
+2b8a9c47c000-2b8a9c480000 r-xp 00000000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b8a9c480000-2b8a9c67f000 ---p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b8a9c67f000-2b8a9c680000 r--p 00003000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b8a9c680000-2b8a9c681000 rw-p 00004000 00:02 41884                      /usr/lib64/librxe-rdmav2.so
+2b8a9c681000-2b8a9c6a3000 r-xp 00000000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b8a9c6a3000-2b8a9c8a3000 ---p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdm/lib64/libc.so.6(+0x81329)[0x2ba06f670329]
+[eu-a6-009-17:20457] [ 5] /lib64/libc.so.6(+0x39d39)[0x2ba06f628d39]
+[eu-a6-009-17:20457] [ 6] /lib64/libc.so.6(+0x39d87)[0x2ba06f628d87]
+[eu-a6-009-17:20457] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2ba06f61155c]
+[eu-a6-009-17:20457] [ 8] /lib64/libc.so.6(+0x81329)[0x2b449c8f9329]
+[eu-a6-009-17:20458] [ 5] /lib64/libc.so.6(+0x39d39)[0x2b449c8b1d39]
+[eu-a6-009-17:20458] [ 6] /lib64/libc.so.6(+0x39d87)[0x2b449c8b1d87]
+[eu-a6-009-17:20458] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2b449c89a55c]
+[eu-a6-009-17:20458] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20458] *** End of error message ***
+/lib64/libc.so.6(+0x81329)[0x2acee16e6329]
+[eu-a6-009-17:20454] [ 5] /lib64/libc.so.6(+0x39d39)[0x2acee169ed39]
+[eu-a6-009-17:20454] [ 6] /lib64/libc.so.6(+0x39d87)[0x2acee169ed87]
+[eu-a6-009-17:20454] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2acee168755c]
+[eu-a6-009-17:20454] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20454] *** End of error message ***
+/lib64/libc.so.6(+0x39d39)[0x2b1593d86d39]
+[eu-a6-009-17:20460] [ 6] /lib64/libc.so.6(+0x39d87)[0x2b1593d86d87]
+[eu-a6-009-17:20460] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2b1593d6f55c]
+[eu-a6-009-17:20460] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20460] *** End of error message ***
+/lib64/libc.so.6(+0x39d39)[0x2ba5e35b4d39]
+[eu-a6-009-17:20456] [ 6] /lib64/libc.so.6(+0x39d87)[0x2ba5e35b4d87]
+[eu-a6-009-17:20456] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2ba5e359d55c]
+[eu-a6-009-17:20456] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20456] *** End of error message ***
+/lib64/libc.so.6(+0x39d87)[0x2adf3a324d87]
+[eu-a6-009-17:20451] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2adf3a30d55c]
+[eu-a6-009-17:20451] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20451] *** End of error message ***
+/lib64/libc.so.6(+0x78f67)[0x2b0cdf84cf67]
+[eu-a6-009-17:20450] [ 4] /lib64/libc.so.6(+0x81329)[0x2b0cdf855329]
+[eu-a6-009-17:20450] [ 5] av2.so
+2b8a9c8a3000-2b8a9c8a4000 r--p 00022000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b8a9c8a4000-2b8a9c8a6000 rw-p 00023000 00:02 41886                      /usr/lib64/libmlx4-rdmav2.so
+2b8a9ca00000-2b8a9cc00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+2b8a9cc00000-2b8a9ce00000 rw-s 0fc15000 00:05 134447                     /dev/infiniband/uverbs0
+7ffe5f9e9000-7ffe5fa73000 rw-p 00000000 00:00 0                          [stack]
+7ffe5fbc1000-7ffe5fbc3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-a6-009-17:20452] *** Process received signal ***
+[eu-a6-009-17:20452] Signal: Aborted (6)
+[eu-a6-009-17:20452] Signal code:  (-6)
+./main[0x40a16f]
+[eu-a6-009-17:20457] *** End of error message ***
+/lib64/libc.so.6(+0x39d39)[0x2b0cdf80dd39]
+[eu-a6-009-17:20450] [ 6] /lib64/libc.so.6(+0x39d87)[0x2b0cdf80dd87]
+[eu-a6-009-17:20450] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2b0cdf7f655c]
+[eu-a6-009-17:20450] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20452] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2b8a8d930630]
+[eu-a6-009-17:20452] [eu-a6-009-17:20450] *** End of error message ***
+[ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b8a8db733d7]
+[eu-a6-009-17:20452] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b8a8db74ac8]
+[eu-a6-009-17:20452] [ 3] /lib64/libc.so.6(+0x78f67)[0x2b8a8dbb5f67]
+[eu-a6-009-17:20452] [ 4] /lib64/libc.so.6(+0x81329)[0x2b8a8dbbe329]
+[eu-a6-009-17:20452] [ 5] /lib64/libc.so.6(+0x39d39)[0x2b8a8db76d39]
+[eu-a6-009-17:20452] [ 6] /lib64/libc.so.6(+0x39d87)[0x2b8a8db76d87]
+[eu-a6-009-17:20452] [ 7] /lib64/libc.so.6(__libc_start_main+0xfc)[0x2b8a8db5f55c]
+[eu-a6-009-17:20452] [ 8] ./main[0x40a16f]
+[eu-a6-009-17:20452] *** End of error message ***
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-a6-009-17 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

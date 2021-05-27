@@ -1,0 +1,68 @@
+Sender: LSF System <lsfadmin@eu-a6-009-18>
+Subject: Job 173606935: <mpirun ./main 128 100 0.005 verbose> in cluster <euler> Exited
+
+Job <mpirun ./main 128 100 0.005 verbose> was submitted from host <eu-login-11> by user <sklampt> in cluster <euler> at Thu May 27 22:18:45 2021
+Job was executed on host(s) <18*eu-a6-009-18>, in queue <hpc.4h>, as user <sklampt> in cluster <euler> at Thu May 27 22:37:21 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp> was used as the working directory.
+Started at Thu May 27 22:37:21 2021
+Terminated at Thu May 27 22:37:27 2021
+Results reported at Thu May 27 22:37:27 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./main 128 100 0.005 verbose
+------------------------------------------------------------
+
+Exited with exit code 15.
+
+Resource usage summary:
+
+    CPU time :                                   3.00 sec.
+    Max Memory :                                 218 MB
+    Average Memory :                             29.00 MB
+    Total Requested Memory :                     18432.00 MB
+    Delta Memory :                               18214.00 MB
+    Max Swap :                                   -
+    Max Processes :                              18
+    Max Threads :                                23
+    Run time :                                   36 sec.
+    Turnaround time :                            1122 sec.
+
+The output (if any) follows:
+
+rank 0/18 : (1,1) neigh N:S 3:-2 neigh E:W 1:-2 local dims 42 x 21
+rank 1/18 : (2,1) neigh N:S 4:-2 neigh E:W 2:0 local dims 42 x 21
+rank 2/18 : (3,1) neigh N:S 5:-2 neigh E:W -2:1 local dims 44 x 21
+rank 3/18 : (1,2) neigh N:S 6:0 neigh E:W 4:-2 local dims 42 x 21
+rank 4/18 : (2,2) neigh N:S 7:1 neigh E:W 5:3 local dims 42 x 21
+rank 5/18 : (3,2) neigh N:S 8:2 neigh E:W -2:4 local dims 44 x 21
+rank 6/18 : (1,3) neigh N:S 9:3 neigh E:W 7:-2 local dims 42 x 21
+rank 7/18 : (2,3) neigh N:S 10:4 neigh E:W 8:6 local dims 42 x 21
+rank 8/18 : (3,3) neigh N:S 11:5 neigh E:W -2:7 local dims 44 x 21
+rank 9/18 : (1,4) neigh N:S 12:6 neigh E:W 10:-2 local dims 42 x 21
+rank 10/18 : (2,4) neigh N:S 13:7 neigh E:W 11:9 local dims 42 x 21
+rank 11/18 : (3,4) neigh N:S 14:8 neigh E:W -2:10 local dims 44 x 21
+rank 12/18 : (1,5) neigh N:S 15:9 neigh E:W 13:-2 local dims 42 x 21
+rank 13/18 : (2,5) neigh N:S 16:10 neigh E:W 14:12 local dims 42 x 21
+rank 14/18 : (3,5) neigh N:S 17:11 neigh E:W -2:13 local dims 44 x 21
+rank 15/18 : (1,6) neigh N:S -2:12 neigh E:W 16:-2 local dims 42 x 23
+rank 16/18 : (2,6) neigh N:S -2:13 neigh E:W 17:15 local dims 42 x 23
+rank 17/18 : (3,6) neigh N:S -2:14 neigh E:W -2:16 local dims 44 x 23
+========================================================================
+                      Welcome to mini-stencil!
+version   :: MPI : 18 MPI ranks
+mesh      :: 128 * 128 dx = 0.00787402
+time      :: 100 time steps from 0 .. 0.005
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+[eu-a6-009-18:55074] *** An error occurred in MPI_Waitall
+[eu-a6-009-18:55074] *** reported by process [1212481537,16]
+[eu-a6-009-18:55074] *** on communicator MPI_COMMUNICATOR 3
+[eu-a6-009-18:55074] *** MPI_ERR_TRUNCATE: message truncated
+[eu-a6-009-18:55074] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[eu-a6-009-18:55074] ***    and potentially your MPI job)
+[eu-a6-009-18:54924] 5 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[eu-a6-009-18:54924] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

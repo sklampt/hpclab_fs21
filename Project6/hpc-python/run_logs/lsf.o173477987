@@ -1,0 +1,102 @@
+Sender: LSF System <lsfadmin@eu-a2p-201>
+Subject: Job 173477987: <mpirun python3 domain_decomp.py> in cluster <euler> Done
+
+Job <mpirun python3 domain_decomp.py> was submitted from host <eu-login-37> by user <sklampt> in cluster <euler> at Wed May 26 17:46:40 2021
+Job was executed on host(s) <4*eu-a2p-201>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Wed May 26 17:46:55 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/hpc-python> was used as the working directory.
+Started at Wed May 26 17:46:55 2021
+Terminated at Wed May 26 17:46:59 2021
+Results reported at Wed May 26 17:46:59 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun python3 domain_decomp.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1.75 sec.
+    Max Memory :                                 97 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               3999.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   32 sec.
+    Turnaround time :                            19 sec.
+
+The output (if any) follows:
+
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            eu-a2p-201
+  Device name:           mlx5_2
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4119
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There are more than one active ports on host 'eu-a2p-201', but the
+default subnet GID prefix was detected on more than one of these
+ports.  If these ports are connected to different physical IB
+networks, this configuration will fail in Open MPI.  This version of
+Open MPI requires that every physically separate IB subnet that is
+used between connected MPI processes must have different subnet ID
+values.
+
+Please see this FAQ entry for more details:
+
+  http://www.open-mpi.org/faq/?category=openfabrics#ofa-default-subnet-gid
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_default_gid_prefix to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   eu-a2p-201
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+rank = 0
+cartesian coords: [0, 0]
+west neighbour: 2
+east neighbour: 2
+south neighbour: 1
+north neighbour: 1
+rank = 1
+cartesian coords: [0, 1]
+west neighbour: 3
+east neighbour: 3
+south neighbour: 0
+north neighbour: 0
+rank = 2
+cartesian coords: [1, 0]
+west neighbour: 0
+east neighbour: 0
+south neighbour: 3
+north neighbour: 3
+rank = 3
+cartesian coords: [1, 1]
+west neighbour: 1
+east neighbour: 1
+south neighbour: 2
+north neighbour: 2
+[eu-a2p-201:126157] 11 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[eu-a2p-201:126157] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[eu-a2p-201:126157] 3 more processes have sent help message help-mpi-btl-openib.txt / default subnet prefix
+[eu-a2p-201:126157] 3 more processes have sent help message help-mpi-btl-openib.txt / error in device init

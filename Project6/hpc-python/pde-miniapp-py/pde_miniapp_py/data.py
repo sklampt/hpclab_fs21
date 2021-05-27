@@ -275,11 +275,57 @@ class Field:
     def exchange_startall(self):
         """Start exchanging boundary field data"""
         domain = self._domain # copy for convenience
-        # ... implement ...
+        north = domain.neighbour_north
+        south = domain.neighbour_south
+        west = domain.neighbour_west
+        east = domain.neighbour_east
+        comm = domain.comm
+
+        if north >= 0:
+            self._buffN[:] = self._inner[:, -1]
+            self.req1 = comm.Isend([self._buffN, MPI.DOUBLE], dest=north)
+            self.req2 = comm.Irecv([self._bdryN, MPI.DOUBLE], source=north)
+
+        if south >= 0:
+            self._buffS[:] = self._inner[:, 0]
+            self.req3 = comm.Isend([self._buffS, MPI.DOUBLE], dest=south)
+            self.req4 = comm.Irecv([self._bdryS, MPI.DOUBLE], source=south)
+
+        if west >= 0:
+            self._buffW[:] = self._inner[0, :]
+            self.req5 = comm.Isend([self._buffW, MPI.DOUBLE], dest=west)
+            self.req6 = comm.Irecv([self._bdryW, MPI.DOUBLE], source=west)
+        
+        if east >= 0:
+            self._buffE[:] = self._inner[-1, :]
+            self.req7 = comm.Isend([self._buffE, MPI.DOUBLE], dest=east)
+            self.req8 = comm.Irecv([self._bdryE, MPI.DOUBLE], source=east)
 
     def exchange_waitall(self):
         """Wait until exchanging boundary field data is complete"""
-        # ... implement ...
+        domain = self._domain
+        north = domain.neighbour_north
+        south = domain.neighbour_south
+        west = domain.neighbour_west
+        east = domain.neighbour_east
+        comm = domain.comm
+
+        if north >= 0:
+            self.req1.wait()
+            self.req2.wait()
+
+        if south >= 0:
+            self.req3.wait()
+            self.req4.wait()
+
+        if west >= 0:
+            self.req5.wait()
+            self.req6.wait()
+
+        if east >= 0:
+            self.req7.wait()
+            self.req8.wait()
+
 
     def write_mpiio(self, fname):
         """Write field to file fname with MPI-IO"""

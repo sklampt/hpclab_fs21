@@ -1,0 +1,39 @@
+Sender: LSF System <lsfadmin@eu-c7-112-07>
+Subject: Job 173272940: <mpirun python3 hello.py> in cluster <euler> Done
+
+Job <mpirun python3 hello.py> was submitted from host <eu-login-37> by user <sklampt> in cluster <euler> at Tue May 25 16:16:38 2021
+Job was executed on host(s) <4*eu-c7-112-07>, in queue <normal.4h>, as user <sklampt> in cluster <euler> at Tue May 25 16:16:48 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/hpc-python> was used as the working directory.
+Started at Tue May 25 16:16:48 2021
+Terminated at Tue May 25 16:16:51 2021
+Results reported at Tue May 25 16:16:51 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun python3 hello.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.67 sec.
+    Max Memory :                                 49 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               4047.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   24 sec.
+    Turnaround time :                            13 sec.
+
+The output (if any) follows:
+
+Hello world from rank 0 out of 4 processes
+Hello world from rank 1 out of 4 processes
+Hello world from rank 2 out of 4 processes
+Hello world from rank 3 out of 4 processes
