@@ -1,0 +1,85 @@
+Sender: LSF System <lsfadmin@eu-a6-011-01>
+Subject: Job 173606929: <mpirun ./main 128 100 0.005 verbose> in cluster <euler> Exited
+
+Job <mpirun ./main 128 100 0.005 verbose> was submitted from host <eu-login-11> by user <sklampt> in cluster <euler> at Thu May 27 22:18:44 2021
+Job was executed on host(s) <14*eu-a6-011-01>, in queue <hpc.4h>, as user <sklampt> in cluster <euler> at Thu May 27 22:20:21 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp> was used as the working directory.
+Started at Thu May 27 22:20:21 2021
+Terminated at Thu May 27 22:20:23 2021
+Results reported at Thu May 27 22:20:23 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./main 128 100 0.005 verbose
+------------------------------------------------------------
+
+Exited with exit code 139.
+
+Resource usage summary:
+
+    CPU time :                                   0.49 sec.
+    Max Memory :                                 185 MB
+    Average Memory :                             -
+    Total Requested Memory :                     14336.00 MB
+    Delta Memory :                               14151.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            99 sec.
+
+The output (if any) follows:
+
+rank 0/14 : (1,1) neigh N:S 2:-2 neigh E:W 1:-2 local dims 64 x 18
+rank 1/14 : (2,1) neigh N:S 3:-2 neigh E:W -2:0 local dims 64 x 18
+rank 2/14 : (1,2) neigh N:S 4:0 neigh E:W 3:-2 local dims 64 x 18
+rank 3/14 : (2,2) neigh N:S 5:1 neigh E:W -2:2 local dims 64 x 18
+rank 4/14 : (1,3) neigh N:S 6:2 neigh E:W 5:-2 local dims 64 x 18
+rank 5/14 : (2,3) neigh N:S 7:3 neigh E:W -2:4 local dims 64 x 18
+rank 6/14 : (1,4) neigh N:S 8:4 neigh E:W 7:-2 local dims 64 x 18
+rank 7/14 : (2,4) neigh N:S 9:5 neigh E:W -2:6 local dims 64 x 18
+rank 8/14 : (1,5) neigh N:S 10:6 neigh E:W 9:-2 local dims 64 x 18
+rank 9/14 : (2,5) neigh N:S 11:7 neigh E:W -2:8 local dims 64 x 18
+rank 10/14 : (1,6) neigh N:S 12:8 neigh E:W 11:-2 local dims 64 x 18
+rank 11/14 : (2,6) neigh N:S 13:9 neigh E:W -2:10 local dims 64 x 18
+rank 12/14 : (1,7) neigh N:S -2:10 neigh E:W 13:-2 local dims 64 x 20
+rank 13/14 : (2,7) neigh N:S -2:11 neigh E:W -2:12 local dims 64 x 20
+========================================================================
+                      Welcome to mini-stencil!
+version   :: MPI : 14 MPI ranks
+mesh      :: 128 * 128 dx = 0.00787402
+time      :: 100 time steps from 0 .. 0.005
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+[eu-a6-011-01:59049] *** Process received signal ***
+[eu-a6-011-01:59049] Signal: Segmentation fault (11)
+[eu-a6-011-01:59049] Signal code: Address not mapped (1)
+[eu-a6-011-01:59049] Failing at address: 0x10
+[eu-a6-011-01:59049] [ 0] /lib64/libpthread.so.0(+0xf630)[0x2b655746e630]
+[eu-a6-011-01:59049] [ 1] /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/openmpi/mca_pml_ob1.so(mca_pml_ob1_recv_req_start+0x652)[0x2b6568ab7682]
+[eu-a6-011-01:59049] [ 2] /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/openmpi/mca_pml_ob1.so(mca_pml_ob1_irecv+0x111)[0x2b6568aa6c61]
+[eu-a6-011-01:59049] [ 3] /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40(ompi_coll_base_allreduce_intra_recursivedoubling+0x2d8)[0x2b655671f3d8]
+[eu-a6-011-01:59049] [ 4] /cluster/apps/openmpi/3.0.0/x86_64/gcc_6.3.0/lib/libmpi.so.40(MPI_Allreduce+0x19a)[0x2b65566deb4a]
+[eu-a6-011-01:59049] [ 5] ./main[0x40dae7]
+[eu-a6-011-01:59049] [ 6] ./main[0x4098f6]
+[eu-a6-011-01:59049] [ 7] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b655769d555]
+[eu-a6-011-01:59049] [ 8] ./main[0x40a16f]
+[eu-a6-011-01:59049] *** End of error message ***
+[eu-a6-011-01:59052] *** Process received signal ***
+[eu-a6-011-01:59052] Signal: Segmentation fault (11)
+[eu-a6-011-01:59052] Signal code: Address not mapped (1)
+[eu-a6-011-01:59052] Failing at address: 0x10
+[eu-a6-011-01:59056] *** Process received signal ***
+[eu-a6-011-01:59056] Signal: Segmentation fault (11)
+[eu-a6-011-01:59056] Signal code: Address not mapped (1)
+[eu-a6-011-01:59056] Failing at address: 0x10
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node eu-a6-011-01 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

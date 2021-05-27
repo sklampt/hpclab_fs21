@@ -1,0 +1,250 @@
+Sender: LSF System <lsfadmin@eu-a6-012-23>
+Subject: Job 173606905: <mpirun ./main 128 100 0.005 verbose> in cluster <euler> Done
+
+Job <mpirun ./main 128 100 0.005 verbose> was submitted from host <eu-login-11> by user <sklampt> in cluster <euler> at Thu May 27 22:18:40 2021
+Job was executed on host(s) <2*eu-a6-012-23>, in queue <hpc.4h>, as user <sklampt> in cluster <euler> at Thu May 27 23:38:54 2021
+</cluster/home/sklampt> was used as the home directory.
+</cluster/home/sklampt/hpclab/hpclab_fs2021/Project6/pde-miniapp> was used as the working directory.
+Started at Thu May 27 23:38:54 2021
+Terminated at Thu May 27 23:38:56 2021
+Results reported at Thu May 27 23:38:56 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun ./main 128 100 0.005 verbose
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.88 sec.
+    Max Memory :                                 45 MB
+    Average Memory :                             -
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               2003.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   25 sec.
+    Turnaround time :                            4816 sec.
+
+The output (if any) follows:
+
+rank 0/2 : (1,1) neigh N:S 1:-2 neigh E:W -2:-2 local dims 128 x 64
+rank 1/2 : (1,2) neigh N:S -2:0 neigh E:W -2:-2 local dims 128 x 64
+========================================================================
+                      Welcome to mini-stencil!
+version   :: MPI : 2 MPI ranks
+mesh      :: 128 * 128 dx = 0.00787402
+time      :: 100 time steps from 0 .. 0.005
+iteration :: CG 200, Newton 50, tolerance 1e-06
+========================================================================
+step 1 required 2 iterations for residual 8.99784e-07
+step 1 required 2 iterations for residual 8.99784e-07
+step 2 required 2 iterations for residual 9.08646e-07
+step 2 required 2 iterations for residual 9.08646e-07
+step 3 required 2 iterations for residual 9.21726e-07
+step 3 required 2 iterations for residual 9.21726e-07
+step 4 required 2 iterations for residual 9.31932e-07
+step 4 required 2 iterations for residual 9.31932e-07
+step 5 required 2 iterations for residual 9.42601e-07
+step 5 required 2 iterations for residual 9.42601e-07
+step 6 required 2 iterations for residual 9.43906e-07
+step 6 required 2 iterations for residual 9.43906e-07
+step 7 required 2 iterations for residual 9.5939e-07
+step 7 required 2 iterations for residual 9.5939e-07
+step 8 required 2 iterations for residual 9.57019e-07
+step 8 required 2 iterations for residual 9.57019e-07
+step 9 required 2 iterations for residual 5.45328e-07
+step 9 required 2 iterations for residual 5.45328e-07
+step 10 required 2 iterations for residual 6.42505e-07
+step 10 required 2 iterations for residual 6.42505e-07
+step 11 required 2 iterations for residual 9.14613e-07
+step 11 required 2 iterations for residual 9.14613e-07
+step 12 required 2 iterations for residual 6.78305e-07
+step 12 required 2 iterations for residual 6.78305e-07
+step 13 required 2 iterations for residual 5.46868e-07
+step 13 required 2 iterations for residual 5.46868e-07
+step 14 required 2 iterations for residual 5.01449e-07
+step 14 required 2 iterations for residual 5.01449e-07
+step 15 required 2 iterations for residual 7.58189e-07
+step 15 required 2 iterations for residual 7.58189e-07
+step 16 required 2 iterations for residual 5.37203e-07
+step 16 required 2 iterations for residual 5.37203e-07
+step 17 required 2 iterations for residual 4.52894e-07
+step 17 required 2 iterations for residual 4.52894e-07
+step 18 required 2 iterations for residual 7.5212e-07
+step 18 required 2 iterations for residual 7.5212e-07
+step 19 required 2 iterations for residual 9.0644e-07
+step 19 required 2 iterations for residual 9.0644e-07
+step 20 required 2 iterations for residual 7.7381e-07
+step 20 required 2 iterations for residual 7.7381e-07
+step 21 required 2 iterations for residual 6.18081e-07
+step 21 required 2 iterations for residual 6.18081e-07
+step 22 required 2 iterations for residual 5.51333e-07
+step 22 required 2 iterations for residual 5.51333e-07
+step 23 required 2 iterations for residual 4.13982e-07
+step 23 required 2 iterations for residual 4.13982e-07
+step 24 required 2 iterations for residual 6.58375e-07
+step 24 required 2 iterations for residual 6.58375e-07
+step 25 required 2 iterations for residual 7.72188e-07
+step 25 required 2 iterations for residual 7.72188e-07
+step 26 required 2 iterations for residual 9.90124e-07
+step 27 required 2 iterations for residual 2.77012e-07
+step 26 required 2 iterations for residual 9.90124e-07
+step 27 required 2 iterations for residual 2.77012e-07
+step 28 required 2 iterations for residual 2.43763e-07
+step 28 required 2 iterations for residual 2.43763e-07
+step 29 required 2 iterations for residual 2.49594e-07
+step 29 required 2 iterations for residual 2.49594e-07
+step 30 required 2 iterations for residual 3.09608e-07
+step 30 required 2 iterations for residual 3.09608e-07
+step 31 required 2 iterations for residual 4.53602e-07
+step 31 required 2 iterations for residual 4.53602e-07
+step 32 required 2 iterations for residual 4.41691e-07
+step 32 required 2 iterations for residual 4.41691e-07
+step 33 required 2 iterations for residual 2.14415e-07
+step 33 required 2 iterations for residual 2.14415e-07
+step 34 required 2 iterations for residual 3.41383e-07
+step 34 required 2 iterations for residual 3.41383e-07
+step 35 required 2 iterations for residual 3.05157e-07
+step 35 required 2 iterations for residual 3.05157e-07
+step 36 required 2 iterations for residual 8.91719e-07
+step 36 required 2 iterations for residual 8.91719e-07
+step 37 required 2 iterations for residual 9.23927e-07
+step 38 required 2 iterations for residual 7.922e-07
+step 37 required 2 iterations for residual 9.23927e-07
+step 38 required 2 iterations for residual 7.922e-07
+step 39 required 2 iterations for residual 7.89058e-07
+step 39 required 2 iterations for residual 7.89058e-07
+step 40 required 2 iterations for residual 9.28234e-07
+step 40 required 2 iterations for residual 9.28234e-07
+step 41 required 2 iterations for residual 7.05383e-07
+step 41 required 2 iterations for residual 7.05383e-07
+step 42 required 2 iterations for residual 6.62575e-07
+step 42 required 2 iterations for residual 6.62575e-07
+step 43 required 2 iterations for residual 9.22637e-07
+step 44 required 2 iterations for residual 9.94415e-07
+step 43 required 2 iterations for residual 9.22637e-07
+step 44 required 2 iterations for residual 9.94415e-07
+step 45 required 2 iterations for residual 4.52636e-07
+step 45 required 2 iterations for residual 4.52636e-07
+step 46 required 2 iterations for residual 8.85709e-07
+step 46 required 2 iterations for residual 8.85709e-07
+step 47 required 2 iterations for residual 3.85109e-07
+step 47 required 2 iterations for residual 3.85109e-07
+step 48 required 2 iterations for residual 8.73081e-07
+step 49 required 2 iterations for residual 4.07555e-07
+step 48 required 2 iterations for residual 8.73081e-07
+step 49 required 2 iterations for residual 4.07555e-07
+step 50 required 2 iterations for residual 8.25669e-07
+step 50 required 2 iterations for residual 8.25669e-07
+step 51 required 2 iterations for residual 9.34988e-07
+step 51 required 2 iterations for residual 9.34988e-07
+step 52 required 2 iterations for residual 7.41657e-07
+step 53 required 2 iterations for residual 8.30975e-07
+step 52 required 2 iterations for residual 7.41657e-07
+step 53 required 2 iterations for residual 8.30975e-07
+step 54 required 2 iterations for residual 7.91973e-07
+step 54 required 2 iterations for residual 7.91973e-07
+step 55 required 2 iterations for residual 4.67446e-07
+step 55 required 2 iterations for residual 4.67446e-07
+step 56 required 2 iterations for residual 3.19593e-07
+step 56 required 2 iterations for residual 3.19593e-07
+step 57 required 2 iterations for residual 7.66969e-07
+step 58 required 2 iterations for residual 9.92421e-07
+step 57 required 2 iterations for residual 7.66969e-07
+step 58 required 2 iterations for residual 9.92421e-07
+step 59 required 2 iterations for residual 2.84401e-07
+step 59 required 2 iterations for residual 2.84401e-07
+step 60 required 2 iterations for residual 7.74168e-07
+step 60 required 2 iterations for residual 7.74168e-07
+step 61 required 2 iterations for residual 7.11543e-07
+step 62 required 2 iterations for residual 7.7492e-07
+step 61 required 2 iterations for residual 7.11543e-07
+step 62 required 2 iterations for residual 7.7492e-07
+step 63 required 2 iterations for residual 9.55369e-07
+step 63 required 2 iterations for residual 9.55369e-07
+step 64 required 2 iterations for residual 5.83744e-07
+step 64 required 2 iterations for residual 5.83744e-07
+step 65 required 2 iterations for residual 8.20669e-07
+step 65 required 2 iterations for residual 8.20669e-07
+step 66 required 2 iterations for residual 8.93325e-07
+step 67 required 2 iterations for residual 3.50828e-07
+step 66 required 2 iterations for residual 8.93325e-07
+step 67 required 2 iterations for residual 3.50828e-07
+step 68 required 2 iterations for residual 8.84288e-07
+step 68 required 2 iterations for residual 8.84288e-07
+step 69 required 2 iterations for residual 9.7664e-07
+step 69 required 2 iterations for residual 9.7664e-07
+step 70 required 2 iterations for residual 8.42651e-07
+step 71 required 2 iterations for residual 2.8647e-07
+step 70 required 2 iterations for residual 8.42651e-07
+step 71 required 2 iterations for residual 2.8647e-07
+step 72 required 2 iterations for residual 8.79141e-07
+step 72 required 2 iterations for residual 8.79141e-07
+step 73 required 2 iterations for residual 2.56149e-07
+step 73 required 2 iterations for residual 2.56149e-07
+step 74 required 2 iterations for residual 8.96917e-07
+step 74 required 2 iterations for residual 8.96917e-07
+step 75 required 2 iterations for residual 2.37902e-07
+step 76 required 2 iterations for residual 9.23287e-07
+step 75 required 2 iterations for residual 2.37902e-07
+step 76 required 2 iterations for residual 9.23287e-07
+step 77 required 2 iterations for residual 2.53824e-07
+step 77 required 2 iterations for residual 2.53824e-07
+step 78 required 2 iterations for residual 9.24052e-07
+step 78 required 2 iterations for residual 9.24052e-07
+step 79 required 2 iterations for residual 6.64109e-07
+step 79 required 2 iterations for residual 6.64109e-07
+step 80 required 2 iterations for residual 9.35271e-07
+step 81 required 2 iterations for residual 2.55828e-07
+step 80 required 2 iterations for residual 9.35271e-07
+step 81 required 2 iterations for residual 2.55828e-07
+step 82 required 2 iterations for residual 3.04388e-07
+step 82 required 2 iterations for residual 3.04388e-07
+step 83 required 2 iterations for residual 6.42272e-07
+step 83 required 2 iterations for residual 6.42272e-07
+step 84 required 2 iterations for residual 8.37944e-07
+step 85 required 2 iterations for residual 2.64568e-07
+step 84 required 2 iterations for residual 8.37944e-07
+step 85 required 2 iterations for residual 2.64568e-07
+step 86 required 2 iterations for residual 8.61986e-07
+step 86 required 2 iterations for residual 8.61986e-07
+step 87 required 2 iterations for residual 3.06008e-07
+step 87 required 2 iterations for residual 3.06008e-07
+step 88 required 2 iterations for residual 8.2577e-07
+step 88 required 2 iterations for residual 8.2577e-07
+step 89 required 2 iterations for residual 2.4507e-07
+step 90 required 2 iterations for residual 3.19379e-07
+step 89 required 2 iterations for residual 2.4507e-07
+step 90 required 2 iterations for residual 3.19379e-07
+step 91 required 2 iterations for residual 4.68757e-07
+step 91 required 2 iterations for residual 4.68757e-07
+step 92 required 2 iterations for residual 6.96641e-07
+step 92 required 2 iterations for residual 6.96641e-07
+step 93 required 2 iterations for residual 8.90695e-07
+step 94 required 2 iterations for residual 6.29684e-07
+step 93 required 2 iterations for residual 8.90695e-07
+step 94 required 2 iterations for residual 6.29684e-07
+step 95 required 2 iterations for residual 2.55309e-07
+step 95 required 2 iterations for residual 2.55309e-07
+step 96 required 2 iterations for residual 7.4084e-07
+step 96 required 2 iterations for residual 7.4084e-07
+step 97 required 2 iterations for residual 9.07601e-07
+step 98 required 2 iterations for residual 9.93503e-07
+step 97 required 2 iterations for residual 9.07601e-07
+step 98 required 2 iterations for residual 9.93503e-07
+step 99 required 2 iterations for residual 9.49384e-07
+step 99 required 2 iterations for residual 9.49384e-07
+step 100 required 2 iterations for residual 3.00741e-07
+step 100 required 2 iterations for residual 3.00741e-07
+--------------------------------------------------------------------------------
+simulation took 0.0936446 seconds
+1513 conjugate gradient iterations, at rate of 16156.8 iters/second
+300 newton iterations
+--------------------------------------------------------------------------------
+Goodbye!
