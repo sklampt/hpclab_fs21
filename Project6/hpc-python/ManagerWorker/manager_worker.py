@@ -28,8 +28,28 @@ def manager(comm, tasks):
     -------
     ... ToDo ...
     """
+    size = comm.Get_size()
+    solved =[]
+    nworker = size-1
 
-    pass
+    for i in range(nworker): 
+        comm.send(tasks[i], dest=i+1, tag=1)
+    
+    for i in range(nworker, len(tasks)):
+        rank = comm.recv(source=MPI.ANY_SOURCE, tag=1)
+        data = comm.recv(source=rank, tag=2)
+        solved += [data]
+        comm.send(tasks[i], dest=rank, tag=1)
+
+    for i in range(nworker):
+        rank = comm.recv(source=MPI.ANY_SOURCE, tag=1)
+        data = comm.recv(source=rank, tag=2)
+        solved += [data]
+        end = 'end'
+        comm.send(end, dest=i+1, tag=1)
+
+    return solved
+
 
 def worker(comm):
 
@@ -41,7 +61,17 @@ def worker(comm):
     comm : mpi4py.MPI communicator
         MPI communicator
     """
-    pass
+    my_rank = comm.Get_rank()
+    count = 0
+    while True: 
+        task = comm.recv(source=MANAGER, tag=1)
+        if task == 'end':
+            return count 
+        task.do_work()
+        comm.send(my_rank, dest=MANAGER, tag=1)
+        comm.send(task, dest=MANAGER, tag=2)
+        count += 1
+
 
 def readcmdline(rank):
     """
@@ -106,14 +136,23 @@ if __name__ == "__main__":
     x_max  = +1.
     y_min  = -1.5
     y_max  = +1.5
+
     M = mandelbrot(x_min, x_max, nx, y_min, y_max, ny, ntasks)
     tasks = M.get_tasks()
-    for task in tasks:
-        task.do_work()
-    m = M.combine_tasks(tasks)
-    plt.imshow(m.T, cmap="gray", extent=[x_min, x_max, y_min, y_max])
-    plt.savefig("mandelbrot.png")
 
+    tasks_worker = [-1,-1,-1,-1] 
+    tasks_worker.append(-1)
+
+   
+    if my_rank == MANAGER:
+        result = manager(comm,tasks)
+        m = M.combine_tasks(result)
+        plt.imshow(m.T, cmap="gray", extent=[x_min, x_max, y_min, y_max])
+        plt.savefig("mandelbrot.png")
+    else:
+        tasks_worker[0] = worker(comm)
+        print(f" Worker {my_rank:5d} has done {tasks_worker[0]:10d} tasks")
+    
     # stop timer
     timespent += time.perf_counter()
 
@@ -123,6 +162,7 @@ if __name__ == "__main__":
         for i in range(size):
             if i == MANAGER:
                 continue
-            print(f"Process {i:5d} has done {TasksDoneByWorker[i]:10d} tasks")
-        print("Done.")
+        #     print(f"Process {i:5d} has done {TasksDoneByWorker[i]:10d} tasks")
+        # print("Done.")
+    MPI.Finalize()
 
