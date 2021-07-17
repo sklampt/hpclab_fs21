@@ -1,0 +1,68 @@
+*** HOW TO PREPARE FOR EXAM ***
+    - flashcards: MPI standards
+        - send/recv
+        - isend/irecv
+        - cartcreate
+        - cartshift
+        - broadcast
+        - scatter/gather
+        - wait/waitall
+
+    - revise & summarize reports
+
+
+*** EXAM TOPICS ***
+    - short summary of all projects
+
+    - which project most interesting (focus on that project)
+
+    - project 1:
+        - summary
+        - performance plots of matrix-matrix addition, multiplication
+        - max. performance Euler (exact numbers!)
+        - explain dynamic/static scheduling of openMP
+        - write code how to transpose matrix (with openMP)
+
+    - project 2:
+        -
+        -
+    
+    - project 3:
+        - Fisher equation
+            - how to discretize (roughly)
+            - performance plot
+        -
+    
+    - project 4:
+        - page rank:
+            - how to make it more efficient when connectivity matrix G is known
+                (maybe)
+                - expected to mention methods of graph partitioning
+        -
+
+    - project 5:
+        - explain methods, use, write down Laplace matrix for different graphs
+        - show spectral bisection in graphs
+        - draw graph where spectral bisection better than inertial bisection
+        - complexity of spectral and inertial graphclustering
+            - spectral bisection:
+                - sparse eigensolver
+                - probably O(n²):
+                    - first calculate matrix L: O(n²)
+                    - search eigenvectors: O(n³), but only need 1 eigenvector: O(n²)
+                    - calculate median: O(n)
+                    => should be O(n²)
+        - spectral bisection in detail
+        - how does performance graph of mini-PDE with MPI look
+        - pro/contra: spectral & inertial bisection
+        - how to improve load balancing
+
+    - project 6:
+        - 
+        -
+    
+    - project 7:
+        -
+        -
+
+    - short questions on other projects
